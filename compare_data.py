@@ -3,20 +3,23 @@ import dolfyn0 as dlfn0
 #from dolfyn0.test.base import load_tdata
 from dolfyn.tests.base import load_ncdata as load1
 import numpy as np
-import glob
 import pandas as pd
 from datetime import datetime as dt
 import numpy as np
 import dolfyn as dlfn1
 import pdb
+load0 = dlfn0.load
+import glob
 
+datadir = 'dolfyn/dolfyn/test/data/'
 
-###### IMPORTANT!!!!
-# Need to replace the pkl.py file in pyDictH5 with the one here in order for this to work!
+ALL_FILES = glob.glob(datadir + '*.h5')
+ALL_FILES.sort()
 
-from io import StringIO 
-import sys
+def print_all_files():
 
+    for fl in ALL_FILES:
+        print(fl.rsplit('/')[-1])
 
 def time2timestamp(time):
     try:
@@ -29,18 +32,40 @@ def time2timestamp(time):
     return pd.to_datetime(tmp)
 
 
-class Capturing(list):
-    def __enter__(self):
-        self._stdout = sys.stdout
-        sys.stdout = self._stringio = StringIO()
-        return self
-    def __exit__(self, *args):
-        self.extend(self._stringio.getvalue().splitlines())
-        del self._stringio    # free up some memory
-        sys.stdout = self._stdout
+
+
+def compare_file(fname):
+    fnm = fname.rsplit('/')[-1].split('.')[0]
+    print("")
+    print("*********************************")
+    print('Checking data for {}...'.format(fname))
+
+    try:
+        data0 = load0(fname)
+    except FileNotFoundError:
+        data0 = load0(datadir + '/' + fname)
+    try:
+        data1 = load1(fnm + '.nc')
+    except FileNotFoundError:
+        print("### NO DOLfYN 1.0 FILE ###")
+        return data0, None
+
+    match = compare_data(data0, data1)
+
+    if match:
+        print("Data matches!")
+    else:
+        print("### Data Does Not Match ###")
+    
+    return data0, data1
+
 
 
 def compare_data(data0, data1):
+    """Compare the DOLfYN 0.12 object `data0` to the DOLfYN 1.0 object `data1`.
+
+    Returns: True if the data match (according to the complex rules defined below), and False otherwise.
+    """
     match = True
     for ky in data0.props:
         val0 = data0.props[ky]
@@ -122,31 +147,5 @@ def compare_data(data0, data1):
     return match
         
 if __name__ == '__main__':
-    datadir = 'dolfyn/dolfyn/test/data/'
-    files = glob.glob(datadir + '*.h5')
-    files.sort()
 
-    import time
-    
-    for ffname in files:
-        fnm = ffname.rsplit('/')[-1].split('.')[0]
-        print("")
-        print("*********************************")
-        print('Checking data for {}...'.format(fnm), end='')
-
-        data0 = dlfn0.load(ffname)
-        try:
-            data1 = load1(fnm + '.nc')
-        except FileNotFoundError:
-            print("### NO DOLfYN 1.0 FILE ###")
-            continue
-
-        with Capturing() as output:
-            match = compare_data(data0, data1)
-
-        if match:
-            print(" OK!")
-        else:
-            print()
-            for line in output:
-                print(line)
+    print_all_files()
