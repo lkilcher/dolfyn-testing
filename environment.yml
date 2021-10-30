@@ -1,0 +1,11 @@
+dependencies:
+  - numpy
+  - h5py
+  - matplotlib
+  - scipy
+  - six
+  - pip
+  - ipython
+  - xarray
+  - pandas
+  - netcdf4
