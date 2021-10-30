@@ -1,3 +1,5 @@
+# Setup
+
 To get started, first setup and activate a new virtual environment.
 
 Then, if using conda, you can do:
@@ -9,10 +11,25 @@ Or -- if you're not using conda -- simply do:
     
     pip install -r requirements.txt
 
+# Getting Started
+
 From there, you should be able to run the `run_all.py` script to compare all of the data in the `DOLfYN 0.12` test data directory to the data in the `DOLfYN 0.13` test data (note, `0.13` will soon be `DOLfYN 1.0-beta`):
 
     python run_all.py
+
+Occassionally we will write the output of this script to a file in this repo by:
+
+    python run_all.py > run_all-output.txt
     
+Eventually, we'd like for all of these tests to be totally cleaned up so that every file has an `OK!` next to it. This should happen by one-of-three paths:
+    1. By identifying the difference as inconsequential, and filtering it out of the checks in the `compare_data` function
+    2. Identify a problem in the dolfyn-0.12 data -- and probably just fixing it in the `compare_data` function inside of `compare_data.py`
+    3. By fixing the dolfyn-1.0 code and test data
+
+Let's plan to discuss all of the inconsistencies that are captured in `run_all_output.txt` on a pull request...
+
+# Detailed inspection of individual files
+
 It's also possible to inspect the difference between individual files interactively using:
 
     >>> from compare_data import compare_file
@@ -98,4 +115,5 @@ It's also possible to show a list of all the test files by either calling `compa
     winriver01.h5
     winriver02.h5
     winriver02_rotate_ship2earth.h5
+
 
