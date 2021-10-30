@@ -10,6 +10,8 @@ import dolfyn as dlfn1
 import pdb
 load0 = dlfn0.load
 import glob
+from dolfyn.time import date2epoch
+from dolfyn0.data.time import num2date
 
 datadir = 'dolfyn/dolfyn/test/data/'
 
@@ -50,7 +52,7 @@ def compare_file(fname):
         print("### NO DOLfYN 1.0 FILE ###")
         return data0, None
 
-    match = compare_data(data0, data1)
+    data0, data1, match = compare_data(data0, data1)
 
     if match:
         print("Data matches!")
@@ -58,7 +60,6 @@ def compare_file(fname):
         print("### Data Does Not Match ###")
     
     return data0, data1
-
 
 
 def compare_data(data0, data1):
@@ -89,15 +90,15 @@ def compare_data(data0, data1):
             match = False
             print("Property '{}' does not match".format(ky))
 
-    if data1.time.shape[0] < data0.mpltime.shape[0]:
-        print("Data-new is shorter than data old!")
-
     # Need to put this here because the `data0 = data0.subset[:500]` line was clipping the `range_echo` variable.
     range_echo_flag = False
     if 'range_echo' in data0:
         range_echo_flag = True
         tmp = data0.pop('range_echo')
 
+    if data1.time.shape[0] < data0.mpltime.shape[0]:
+        # I've decided this is inconequential. We're just truncating the data on the next line...
+        pass
     data0 = data0.subset[:500]
 
     # When we're dealing with very-short datasets (in time), data1 is often longer than data0
@@ -108,7 +109,13 @@ def compare_data(data0, data1):
     # Put `range_echo` back into the dataset
     if range_echo_flag:
         data0['range_echo'] = tmp
-    
+
+    t0 = np.array(date2epoch(list(num2date(data0.mpltime))))
+    if np.allclose(t0, data1.time):
+        print("    TIME OK!".format(ky))
+    else:
+        print("!!! TIME DOES NOT MATCH !!!")
+        
     for ky in data0.iter_data():
         val = data0[ky]
 
@@ -118,7 +125,7 @@ def compare_data(data0, data1):
         
         if ky.startswith('config'):
             continue
-        elif ky in ['props']:
+        elif ky in ['props', 'mpltime']:
             continue
         elif ky == 'env.temp' and data0.props['inst_model'] == 'AWAC':
             val /= 100
@@ -135,16 +142,16 @@ def compare_data(data0, data1):
         if ky == 'Spec.vel':
             nm = 'spec'
         if nm in data1:
-            if np.allclose(data1[nm], val, rtol=rtol, atol=atol):
+            if np.allclose(data1[nm], val, rtol=rtol, atol=atol, equal_nan=True):
                 print("    {} OK!".format(ky))
             else:
-                print("### {} DOES NOT MATCH ###".format(ky.upper()))
+                print("### {} DOES NOT MATCH".format(ky.upper()))
                 if ky == 'range':
                     error
                 match = False
         else:
-            print('--- {} not in new dataset. ---'.format(ky))
-    return match
+            print('--- {} not in new dataset.'.format(ky))
+    return data0, data1, match
         
 if __name__ == '__main__':
 

@@ -26,7 +26,7 @@ Eventually, we'd like for all of these tests to be totally cleaned up so that ev
     2. Identify a problem in the dolfyn-0.12 data -- and probably just fixing it in the `compare_data` function inside of `compare_data.py`
     3. By fixing the dolfyn-1.0 code and test data
 
-Let's plan to discuss all of the inconsistencies that are captured in `run_all_output.txt` on a pull request...
+Let's plan to discuss all of the inconsistencies that are captured in `run_all_output.txt` on [this pull request](https://github.com/lkilcher/dolfyn-testing/pull/2/files).
 
 # Detailed inspection of individual files
 

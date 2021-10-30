@@ -28,7 +28,7 @@ for ffname in ALL_FILES:
         continue
 
     with Capturing() as output:
-        match = compare_data(data0, data1)
+        data0, data1, match = compare_data(data0, data1)
 
     if match:
         print(" OK!")
