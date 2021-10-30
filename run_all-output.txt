@@ -1,0 +1,1275 @@
+
+*********************************
+Checking data for AWAC_test01... OK!
+
+*********************************
+Checking data for AWAC_test01_earth2inst...
+Data-new is shorter than data old!
+    env.c_sound OK!
+    env.pressure OK!
+    env.temp OK!
+--- mpltime not in new dataset. ---
+    orient.orientmat OK!
+    range OK!
+    signal.amp OK!
+--- sys.Error not in new dataset. ---
+--- sys.batt not in new dataset. ---
+--- sys.status not in new dataset. ---
+### VEL DOES NOT MATCH ###
+
+*********************************
+Checking data for AWAC_test01_earth2principal...
+Property 'coord_sys' does not match
+Property 'principal_heading' does not match
+Data-new is shorter than data old!
+    env.c_sound OK!
+    env.pressure OK!
+    env.temp OK!
+--- mpltime not in new dataset. ---
+    orient.orientmat OK!
+    range OK!
+    signal.amp OK!
+--- sys.Error not in new dataset. ---
+--- sys.batt not in new dataset. ---
+--- sys.status not in new dataset. ---
+### VEL DOES NOT MATCH ###
+
+*********************************
+Checking data for AWAC_test01_inst2beam...
+Data-new is shorter than data old!
+    env.c_sound OK!
+    env.pressure OK!
+    env.temp OK!
+--- mpltime not in new dataset. ---
+    orient.orientmat OK!
+    range OK!
+    signal.amp OK!
+--- sys.Error not in new dataset. ---
+--- sys.batt not in new dataset. ---
+--- sys.status not in new dataset. ---
+### VEL DOES NOT MATCH ###
+
+*********************************
+Checking data for AWAC_test01_ud...
+Data-new is shorter than data old!
+    env.c_sound OK!
+    env.pressure OK!
+    env.temp OK!
+--- mpltime not in new dataset. ---
+    orient.orientmat OK!
+    range OK!
+    signal.amp OK!
+--- sys.Error not in new dataset. ---
+--- sys.batt not in new dataset. ---
+--- sys.status not in new dataset. ---
+### VEL DOES NOT MATCH ###
+
+*********************************
+Checking data for BenchFile01...
+Property 'rotate_vars' does not match
+Data-new is shorter than data old!
+### ALT.ALT_DIST DOES NOT MATCH ###
+### ALT.ALT_QUALITY DOES NOT MATCH ###
+    alt.alt_status OK!
+### ALT.AST_DIST DOES NOT MATCH ###
+    alt.ast_offset_time OK!
+    alt.ast_pressure OK!
+### ALT.AST_QUALITY DOES NOT MATCH ###
+### ALTRAW.ALT.ALT_DIST DOES NOT MATCH ###
+### ALTRAW.ALT.ALT_QUALITY DOES NOT MATCH ###
+    altraw.alt.alt_status OK!
+--- altraw.alt.altraw_dist not in new dataset. ---
+--- altraw.alt.altraw_nsamp not in new dataset. ---
+--- altraw.alt.altraw_samp not in new dataset. ---
+### ALTRAW.ALT.AST_DIST DOES NOT MATCH ###
+### ALTRAW.ALT.AST_OFFSET_TIME DOES NOT MATCH ###
+    altraw.alt.ast_pressure OK!
+### ALTRAW.ALT.AST_QUALITY DOES NOT MATCH ###
+### ALTRAW.ENV.C_SOUND DOES NOT MATCH ###
+--- altraw.env.press not in new dataset. ---
+### ALTRAW.ENV.TEMP DOES NOT MATCH ###
+--- altraw.mpltime not in new dataset. ---
+### ALTRAW.ORIENT.ACCEL DOES NOT MATCH ###
+### ALTRAW.ORIENT.HEADING DOES NOT MATCH ###
+### ALTRAW.ORIENT.MAG DOES NOT MATCH ###
+### ALTRAW.ORIENT.PITCH DOES NOT MATCH ###
+### ALTRAW.ORIENT.ROLL DOES NOT MATCH ###
+--- altraw.sys.ambig_vel not in new dataset. ---
+--- altraw.sys.batt_V not in new dataset. ---
+--- altraw.sys.ensemble not in new dataset. ---
+--- altraw.sys.erro not in new dataset. ---
+--- altraw.sys.status not in new dataset. ---
+--- altraw.sys.status0 not in new dataset. ---
+--- altraw.sys.temp_clock not in new dataset. ---
+--- altraw.sys.temp_mag not in new dataset. ---
+--- altraw.sys.temp_press not in new dataset. ---
+--- altraw.sys.xmit_energy not in new dataset. ---
+    env.c_sound OK!
+--- env.press not in new dataset. ---
+    env.temp OK!
+--- mpltime not in new dataset. ---
+--- mpltime_b5 not in new dataset. ---
+    orient.accel OK!
+    orient.accel_b5 OK!
+### ORIENT.MAG DOES NOT MATCH ###
+### ORIENT.MAG_B5 DOES NOT MATCH ###
+--- orient.orient_up not in new dataset. ---
+    orient.orientmat OK!
+    range OK!
+    range_b5 OK!
+    signal.amp OK!
+    signal.amp_b5 OK!
+    signal.corr OK!
+    signal.corr_b5 OK!
+--- sys.ambig_vel not in new dataset. ---
+--- sys.ambig_vel_b5 not in new dataset. ---
+--- sys.batt_V not in new dataset. ---
+--- sys.ensemble not in new dataset. ---
+--- sys.ensemble_b5 not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.error_b5 not in new dataset. ---
+--- sys.status not in new dataset. ---
+--- sys.status0 not in new dataset. ---
+--- sys.status0_b5 not in new dataset. ---
+--- sys.status_b5 not in new dataset. ---
+--- sys.temp_clock not in new dataset. ---
+--- sys.temp_mag not in new dataset. ---
+--- sys.temp_press not in new dataset. ---
+--- sys.xmit_energy not in new dataset. ---
+--- sys.xmit_energy_b5 not in new dataset. ---
+    vel OK!
+    vel_b5 OK!
+
+*********************************
+Checking data for BenchFile01_rotate_beam2inst...
+Property 'rotate_vars' does not match
+Data-new is shorter than data old!
+### ALT.ALT_DIST DOES NOT MATCH ###
+### ALT.ALT_QUALITY DOES NOT MATCH ###
+    alt.alt_status OK!
+### ALT.AST_DIST DOES NOT MATCH ###
+    alt.ast_offset_time OK!
+    alt.ast_pressure OK!
+### ALT.AST_QUALITY DOES NOT MATCH ###
+### ALTRAW.ALT.ALT_DIST DOES NOT MATCH ###
+### ALTRAW.ALT.ALT_QUALITY DOES NOT MATCH ###
+    altraw.alt.alt_status OK!
+--- altraw.alt.altraw_dist not in new dataset. ---
+--- altraw.alt.altraw_nsamp not in new dataset. ---
+--- altraw.alt.altraw_samp not in new dataset. ---
+### ALTRAW.ALT.AST_DIST DOES NOT MATCH ###
+### ALTRAW.ALT.AST_OFFSET_TIME DOES NOT MATCH ###
+    altraw.alt.ast_pressure OK!
+### ALTRAW.ALT.AST_QUALITY DOES NOT MATCH ###
+### ALTRAW.ENV.C_SOUND DOES NOT MATCH ###
+--- altraw.env.press not in new dataset. ---
+### ALTRAW.ENV.TEMP DOES NOT MATCH ###
+--- altraw.mpltime not in new dataset. ---
+### ALTRAW.ORIENT.ACCEL DOES NOT MATCH ###
+### ALTRAW.ORIENT.HEADING DOES NOT MATCH ###
+### ALTRAW.ORIENT.MAG DOES NOT MATCH ###
+### ALTRAW.ORIENT.PITCH DOES NOT MATCH ###
+### ALTRAW.ORIENT.ROLL DOES NOT MATCH ###
+--- altraw.sys.ambig_vel not in new dataset. ---
+--- altraw.sys.batt_V not in new dataset. ---
+--- altraw.sys.ensemble not in new dataset. ---
+--- altraw.sys.erro not in new dataset. ---
+--- altraw.sys.status not in new dataset. ---
+--- altraw.sys.status0 not in new dataset. ---
+--- altraw.sys.temp_clock not in new dataset. ---
+--- altraw.sys.temp_mag not in new dataset. ---
+--- altraw.sys.temp_press not in new dataset. ---
+--- altraw.sys.xmit_energy not in new dataset. ---
+    env.c_sound OK!
+--- env.press not in new dataset. ---
+    env.temp OK!
+--- mpltime not in new dataset. ---
+--- mpltime_b5 not in new dataset. ---
+    orient.accel OK!
+    orient.accel_b5 OK!
+### ORIENT.MAG DOES NOT MATCH ###
+### ORIENT.MAG_B5 DOES NOT MATCH ###
+--- orient.orient_up not in new dataset. ---
+    orient.orientmat OK!
+    range OK!
+    range_b5 OK!
+    signal.amp OK!
+    signal.amp_b5 OK!
+    signal.corr OK!
+    signal.corr_b5 OK!
+--- sys.ambig_vel not in new dataset. ---
+--- sys.ambig_vel_b5 not in new dataset. ---
+--- sys.batt_V not in new dataset. ---
+--- sys.ensemble not in new dataset. ---
+--- sys.ensemble_b5 not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.error_b5 not in new dataset. ---
+--- sys.status not in new dataset. ---
+--- sys.status0 not in new dataset. ---
+--- sys.status0_b5 not in new dataset. ---
+--- sys.status_b5 not in new dataset. ---
+--- sys.temp_clock not in new dataset. ---
+--- sys.temp_mag not in new dataset. ---
+--- sys.temp_press not in new dataset. ---
+--- sys.xmit_energy not in new dataset. ---
+--- sys.xmit_energy_b5 not in new dataset. ---
+    vel OK!
+    vel_b5 OK!
+
+*********************************
+Checking data for BenchFile01_rotate_earth2principal...
+Property 'coord_sys' does not match
+Property 'principal_heading' does not match
+Property 'rotate_vars' does not match
+Data-new is shorter than data old!
+### ALT.ALT_DIST DOES NOT MATCH ###
+### ALT.ALT_QUALITY DOES NOT MATCH ###
+    alt.alt_status OK!
+### ALT.AST_DIST DOES NOT MATCH ###
+    alt.ast_offset_time OK!
+    alt.ast_pressure OK!
+### ALT.AST_QUALITY DOES NOT MATCH ###
+### ALTRAW.ALT.ALT_DIST DOES NOT MATCH ###
+### ALTRAW.ALT.ALT_QUALITY DOES NOT MATCH ###
+    altraw.alt.alt_status OK!
+--- altraw.alt.altraw_dist not in new dataset. ---
+--- altraw.alt.altraw_nsamp not in new dataset. ---
+--- altraw.alt.altraw_samp not in new dataset. ---
+### ALTRAW.ALT.AST_DIST DOES NOT MATCH ###
+### ALTRAW.ALT.AST_OFFSET_TIME DOES NOT MATCH ###
+    altraw.alt.ast_pressure OK!
+### ALTRAW.ALT.AST_QUALITY DOES NOT MATCH ###
+### ALTRAW.ENV.C_SOUND DOES NOT MATCH ###
+--- altraw.env.press not in new dataset. ---
+### ALTRAW.ENV.TEMP DOES NOT MATCH ###
+--- altraw.mpltime not in new dataset. ---
+### ALTRAW.ORIENT.ACCEL DOES NOT MATCH ###
+### ALTRAW.ORIENT.HEADING DOES NOT MATCH ###
+### ALTRAW.ORIENT.MAG DOES NOT MATCH ###
+### ALTRAW.ORIENT.PITCH DOES NOT MATCH ###
+### ALTRAW.ORIENT.ROLL DOES NOT MATCH ###
+--- altraw.sys.ambig_vel not in new dataset. ---
+--- altraw.sys.batt_V not in new dataset. ---
+--- altraw.sys.ensemble not in new dataset. ---
+--- altraw.sys.erro not in new dataset. ---
+--- altraw.sys.status not in new dataset. ---
+--- altraw.sys.status0 not in new dataset. ---
+--- altraw.sys.temp_clock not in new dataset. ---
+--- altraw.sys.temp_mag not in new dataset. ---
+--- altraw.sys.temp_press not in new dataset. ---
+--- altraw.sys.xmit_energy not in new dataset. ---
+    env.c_sound OK!
+--- env.press not in new dataset. ---
+    env.temp OK!
+--- mpltime not in new dataset. ---
+--- mpltime_b5 not in new dataset. ---
+### ORIENT.ACCEL DOES NOT MATCH ###
+### ORIENT.ACCEL_B5 DOES NOT MATCH ###
+### ORIENT.MAG DOES NOT MATCH ###
+### ORIENT.MAG_B5 DOES NOT MATCH ###
+--- orient.orient_up not in new dataset. ---
+    orient.orientmat OK!
+    range OK!
+    range_b5 OK!
+    signal.amp OK!
+    signal.amp_b5 OK!
+    signal.corr OK!
+    signal.corr_b5 OK!
+--- sys.ambig_vel not in new dataset. ---
+--- sys.ambig_vel_b5 not in new dataset. ---
+--- sys.batt_V not in new dataset. ---
+--- sys.ensemble not in new dataset. ---
+--- sys.ensemble_b5 not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.error_b5 not in new dataset. ---
+--- sys.status not in new dataset. ---
+--- sys.status0 not in new dataset. ---
+--- sys.status0_b5 not in new dataset. ---
+--- sys.status_b5 not in new dataset. ---
+--- sys.temp_clock not in new dataset. ---
+--- sys.temp_mag not in new dataset. ---
+--- sys.temp_press not in new dataset. ---
+--- sys.xmit_energy not in new dataset. ---
+--- sys.xmit_energy_b5 not in new dataset. ---
+### VEL DOES NOT MATCH ###
+    vel_b5 OK!
+
+*********************************
+Checking data for BenchFile01_rotate_inst2earth...
+Property 'rotate_vars' does not match
+Data-new is shorter than data old!
+### ALT.ALT_DIST DOES NOT MATCH ###
+### ALT.ALT_QUALITY DOES NOT MATCH ###
+    alt.alt_status OK!
+### ALT.AST_DIST DOES NOT MATCH ###
+    alt.ast_offset_time OK!
+    alt.ast_pressure OK!
+### ALT.AST_QUALITY DOES NOT MATCH ###
+### ALTRAW.ALT.ALT_DIST DOES NOT MATCH ###
+### ALTRAW.ALT.ALT_QUALITY DOES NOT MATCH ###
+    altraw.alt.alt_status OK!
+--- altraw.alt.altraw_dist not in new dataset. ---
+--- altraw.alt.altraw_nsamp not in new dataset. ---
+--- altraw.alt.altraw_samp not in new dataset. ---
+### ALTRAW.ALT.AST_DIST DOES NOT MATCH ###
+### ALTRAW.ALT.AST_OFFSET_TIME DOES NOT MATCH ###
+    altraw.alt.ast_pressure OK!
+### ALTRAW.ALT.AST_QUALITY DOES NOT MATCH ###
+### ALTRAW.ENV.C_SOUND DOES NOT MATCH ###
+--- altraw.env.press not in new dataset. ---
+### ALTRAW.ENV.TEMP DOES NOT MATCH ###
+--- altraw.mpltime not in new dataset. ---
+### ALTRAW.ORIENT.ACCEL DOES NOT MATCH ###
+### ALTRAW.ORIENT.HEADING DOES NOT MATCH ###
+### ALTRAW.ORIENT.MAG DOES NOT MATCH ###
+### ALTRAW.ORIENT.PITCH DOES NOT MATCH ###
+### ALTRAW.ORIENT.ROLL DOES NOT MATCH ###
+--- altraw.sys.ambig_vel not in new dataset. ---
+--- altraw.sys.batt_V not in new dataset. ---
+--- altraw.sys.ensemble not in new dataset. ---
+--- altraw.sys.erro not in new dataset. ---
+--- altraw.sys.status not in new dataset. ---
+--- altraw.sys.status0 not in new dataset. ---
+--- altraw.sys.temp_clock not in new dataset. ---
+--- altraw.sys.temp_mag not in new dataset. ---
+--- altraw.sys.temp_press not in new dataset. ---
+--- altraw.sys.xmit_energy not in new dataset. ---
+    env.c_sound OK!
+--- env.press not in new dataset. ---
+    env.temp OK!
+--- mpltime not in new dataset. ---
+--- mpltime_b5 not in new dataset. ---
+### ORIENT.ACCEL DOES NOT MATCH ###
+### ORIENT.ACCEL_B5 DOES NOT MATCH ###
+### ORIENT.MAG DOES NOT MATCH ###
+### ORIENT.MAG_B5 DOES NOT MATCH ###
+--- orient.orient_up not in new dataset. ---
+    orient.orientmat OK!
+    range OK!
+    range_b5 OK!
+    signal.amp OK!
+    signal.amp_b5 OK!
+    signal.corr OK!
+    signal.corr_b5 OK!
+--- sys.ambig_vel not in new dataset. ---
+--- sys.ambig_vel_b5 not in new dataset. ---
+--- sys.batt_V not in new dataset. ---
+--- sys.ensemble not in new dataset. ---
+--- sys.ensemble_b5 not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.error_b5 not in new dataset. ---
+--- sys.status not in new dataset. ---
+--- sys.status0 not in new dataset. ---
+--- sys.status0_b5 not in new dataset. ---
+--- sys.status_b5 not in new dataset. ---
+--- sys.temp_clock not in new dataset. ---
+--- sys.temp_mag not in new dataset. ---
+--- sys.temp_press not in new dataset. ---
+--- sys.xmit_energy not in new dataset. ---
+--- sys.xmit_energy_b5 not in new dataset. ---
+### VEL DOES NOT MATCH ###
+    vel_b5 OK!
+
+*********************************
+Checking data for RDI_test01...
+Property 'inst_make' does not match
+Property 'inst_model' does not match
+--- depth_m not in new dataset. ---
+    env.salinity OK!
+--- env.temperature_C not in new dataset. ---
+--- mpltime not in new dataset. ---
+    orient.orientmat OK!
+    orient.raw.heading OK!
+--- orient.raw.heading_std not in new dataset. ---
+    orient.raw.pitch OK!
+--- orient.raw.pitch_std not in new dataset. ---
+    orient.raw.roll OK!
+--- orient.raw.roll_std not in new dataset. ---
+    range OK!
+    signal.corr OK!
+--- signal.echo not in new dataset. ---
+    signal.prcnt_gd OK!
+--- sys.adc not in new dataset. ---
+--- sys.bit not in new dataset. ---
+--- sys.mpt_sec not in new dataset. ---
+--- sys.number not in new dataset. ---
+--- sys.rtc not in new dataset. ---
+--- sys.ssp not in new dataset. ---
+### VEL DOES NOT MATCH ###
+
+*********************************
+Checking data for RDI_test01_rotate_beam2inst...
+Property 'inst_make' does not match
+Property 'inst_model' does not match
+--- depth_m not in new dataset. ---
+    env.salinity OK!
+--- env.temperature_C not in new dataset. ---
+--- mpltime not in new dataset. ---
+    orient.orientmat OK!
+    range OK!
+    signal.corr OK!
+--- signal.echo not in new dataset. ---
+    signal.prcnt_gd OK!
+--- sys.adc not in new dataset. ---
+--- sys.bit not in new dataset. ---
+--- sys.mpt_sec not in new dataset. ---
+--- sys.number not in new dataset. ---
+--- sys.rtc not in new dataset. ---
+--- sys.ssp not in new dataset. ---
+### VEL DOES NOT MATCH ###
+
+*********************************
+Checking data for RDI_test01_rotate_earth2principal...
+Property 'coord_sys' does not match
+Property 'inst2earth:fixed' NOT FOUND in new dataset
+Property 'inst_make' does not match
+Property 'inst_model' does not match
+Property 'principal_heading' does not match
+--- depth_m not in new dataset. ---
+    env.salinity OK!
+--- env.temperature_C not in new dataset. ---
+--- mpltime not in new dataset. ---
+    orient.orientmat OK!
+    range OK!
+    signal.corr OK!
+--- signal.echo not in new dataset. ---
+    signal.prcnt_gd OK!
+--- sys.adc not in new dataset. ---
+--- sys.bit not in new dataset. ---
+--- sys.mpt_sec not in new dataset. ---
+--- sys.number not in new dataset. ---
+--- sys.rtc not in new dataset. ---
+--- sys.ssp not in new dataset. ---
+### VEL DOES NOT MATCH ###
+
+*********************************
+Checking data for RDI_test01_rotate_inst2earth...
+Property 'inst2earth:fixed' NOT FOUND in new dataset
+Property 'inst_make' does not match
+Property 'inst_model' does not match
+--- depth_m not in new dataset. ---
+    env.salinity OK!
+--- env.temperature_C not in new dataset. ---
+--- mpltime not in new dataset. ---
+    orient.orientmat OK!
+    range OK!
+    signal.corr OK!
+--- signal.echo not in new dataset. ---
+    signal.prcnt_gd OK!
+--- sys.adc not in new dataset. ---
+--- sys.bit not in new dataset. ---
+--- sys.mpt_sec not in new dataset. ---
+--- sys.number not in new dataset. ---
+--- sys.rtc not in new dataset. ---
+--- sys.ssp not in new dataset. ---
+### VEL DOES NOT MATCH ###
+
+*********************************
+Checking data for RDI_withBT...
+Property 'inst_make' does not match
+Property 'inst_model' does not match
+Property 'rotate_vars' does not match
+Data-new is shorter than data old!
+--- bt_range not in new dataset. ---
+--- bt_vel not in new dataset. ---
+--- depth_m not in new dataset. ---
+    env.salinity OK!
+--- env.temperature_C not in new dataset. ---
+--- mpltime not in new dataset. ---
+    orient.orientmat OK!
+    range OK!
+--- signal.bt_ampl not in new dataset. ---
+--- signal.bt_corr not in new dataset. ---
+--- signal.bt_perc_gd not in new dataset. ---
+    signal.corr OK!
+--- signal.echo not in new dataset. ---
+    signal.prcnt_gd OK!
+--- sys.adc not in new dataset. ---
+--- sys.bit not in new dataset. ---
+--- sys.mpt_sec not in new dataset. ---
+--- sys.number not in new dataset. ---
+--- sys.rtc not in new dataset. ---
+--- sys.ssp not in new dataset. ---
+### VEL DOES NOT MATCH ###
+
+*********************************
+Checking data for Sig1000_IMU...
+Property 'rotate_vars' does not match
+Data-new is shorter than data old!
+    env.c_sound OK!
+--- env.press not in new dataset. ---
+    env.temp OK!
+--- mpltime not in new dataset. ---
+--- mpltime_b5 not in new dataset. ---
+    orient.accel OK!
+    orient.accel_b5 OK!
+    orient.angrt OK!
+    orient.angrt_b5 OK!
+### ORIENT.MAG DOES NOT MATCH ###
+### ORIENT.MAG_B5 DOES NOT MATCH ###
+--- orient.orient_up not in new dataset. ---
+    orient.orientmat OK!
+    orient.orientmat_b5 OK!
+    orient.quaternion OK!
+    orient.quaternion_b5 OK!
+    orient.raw.heading OK!
+    orient.raw.pitch OK!
+    orient.raw.roll OK!
+    range OK!
+    range_b5 OK!
+    signal.amp OK!
+    signal.amp_b5 OK!
+    signal.corr OK!
+    signal.corr_b5 OK!
+--- sys.ambig_vel not in new dataset. ---
+--- sys.ambig_vel_b5 not in new dataset. ---
+--- sys.batt_V not in new dataset. ---
+--- sys.ensemble not in new dataset. ---
+--- sys.ensemble_b5 not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.error_b5 not in new dataset. ---
+--- sys.status not in new dataset. ---
+--- sys.status0 not in new dataset. ---
+--- sys.status0_b5 not in new dataset. ---
+--- sys.status_b5 not in new dataset. ---
+--- sys.temp_clock not in new dataset. ---
+--- sys.temp_mag not in new dataset. ---
+--- sys.temp_press not in new dataset. ---
+--- sys.xmit_energy not in new dataset. ---
+--- sys.xmit_energy_b5 not in new dataset. ---
+    vel OK!
+    vel_b5 OK!
+
+*********************************
+Checking data for Sig1000_IMU_rotate_beam2inst...
+Property 'rotate_vars' does not match
+Data-new is shorter than data old!
+    env.c_sound OK!
+--- env.press not in new dataset. ---
+    env.temp OK!
+--- mpltime not in new dataset. ---
+--- mpltime_b5 not in new dataset. ---
+    orient.accel OK!
+    orient.accel_b5 OK!
+    orient.angrt OK!
+    orient.angrt_b5 OK!
+### ORIENT.MAG DOES NOT MATCH ###
+### ORIENT.MAG_B5 DOES NOT MATCH ###
+--- orient.orient_up not in new dataset. ---
+    orient.orientmat OK!
+    orient.orientmat_b5 OK!
+    orient.quaternion OK!
+    orient.quaternion_b5 OK!
+    orient.raw.heading OK!
+    orient.raw.pitch OK!
+    orient.raw.roll OK!
+    range OK!
+    range_b5 OK!
+    signal.amp OK!
+    signal.amp_b5 OK!
+    signal.corr OK!
+    signal.corr_b5 OK!
+--- sys.ambig_vel not in new dataset. ---
+--- sys.ambig_vel_b5 not in new dataset. ---
+--- sys.batt_V not in new dataset. ---
+--- sys.ensemble not in new dataset. ---
+--- sys.ensemble_b5 not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.error_b5 not in new dataset. ---
+--- sys.status not in new dataset. ---
+--- sys.status0 not in new dataset. ---
+--- sys.status0_b5 not in new dataset. ---
+--- sys.status_b5 not in new dataset. ---
+--- sys.temp_clock not in new dataset. ---
+--- sys.temp_mag not in new dataset. ---
+--- sys.temp_press not in new dataset. ---
+--- sys.xmit_energy not in new dataset. ---
+--- sys.xmit_energy_b5 not in new dataset. ---
+    vel OK!
+    vel_b5 OK!
+
+*********************************
+Checking data for Sig1000_IMU_rotate_inst2earth...
+Property 'rotate_vars' does not match
+Data-new is shorter than data old!
+    env.c_sound OK!
+--- env.press not in new dataset. ---
+    env.temp OK!
+--- mpltime not in new dataset. ---
+--- mpltime_b5 not in new dataset. ---
+### ORIENT.ACCEL DOES NOT MATCH ###
+### ORIENT.ACCEL_B5 DOES NOT MATCH ###
+### ORIENT.ANGRT DOES NOT MATCH ###
+### ORIENT.ANGRT_B5 DOES NOT MATCH ###
+### ORIENT.MAG DOES NOT MATCH ###
+### ORIENT.MAG_B5 DOES NOT MATCH ###
+--- orient.orient_up not in new dataset. ---
+    orient.orientmat OK!
+    orient.orientmat_b5 OK!
+    orient.quaternion OK!
+    orient.quaternion_b5 OK!
+    orient.raw.heading OK!
+    orient.raw.pitch OK!
+    orient.raw.roll OK!
+    range OK!
+    range_b5 OK!
+    signal.amp OK!
+    signal.amp_b5 OK!
+    signal.corr OK!
+    signal.corr_b5 OK!
+--- sys.ambig_vel not in new dataset. ---
+--- sys.ambig_vel_b5 not in new dataset. ---
+--- sys.batt_V not in new dataset. ---
+--- sys.ensemble not in new dataset. ---
+--- sys.ensemble_b5 not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.error_b5 not in new dataset. ---
+--- sys.status not in new dataset. ---
+--- sys.status0 not in new dataset. ---
+--- sys.status0_b5 not in new dataset. ---
+--- sys.status_b5 not in new dataset. ---
+--- sys.temp_clock not in new dataset. ---
+--- sys.temp_mag not in new dataset. ---
+--- sys.temp_press not in new dataset. ---
+--- sys.xmit_energy not in new dataset. ---
+--- sys.xmit_energy_b5 not in new dataset. ---
+### VEL DOES NOT MATCH ###
+    vel_b5 OK!
+
+*********************************
+Checking data for Sig1000_IMU_ud...
+Property 'rotate_vars' does not match
+Data-new is shorter than data old!
+    env.c_sound OK!
+--- env.press not in new dataset. ---
+    env.temp OK!
+--- mpltime not in new dataset. ---
+--- mpltime_b5 not in new dataset. ---
+    orient.accel OK!
+    orient.accel_b5 OK!
+    orient.angrt OK!
+    orient.angrt_b5 OK!
+### ORIENT.MAG DOES NOT MATCH ###
+### ORIENT.MAG_B5 DOES NOT MATCH ###
+--- orient.orient_up not in new dataset. ---
+    orient.orientmat OK!
+    orient.orientmat_b5 OK!
+    orient.quaternion OK!
+    orient.quaternion_b5 OK!
+### ORIENT.RAW.HEADING DOES NOT MATCH ###
+    orient.raw.pitch OK!
+    orient.raw.roll OK!
+    range OK!
+    range_b5 OK!
+    signal.amp OK!
+    signal.amp_b5 OK!
+    signal.corr OK!
+    signal.corr_b5 OK!
+--- sys.ambig_vel not in new dataset. ---
+--- sys.ambig_vel_b5 not in new dataset. ---
+--- sys.batt_V not in new dataset. ---
+--- sys.ensemble not in new dataset. ---
+--- sys.ensemble_b5 not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.error_b5 not in new dataset. ---
+--- sys.status not in new dataset. ---
+--- sys.status0 not in new dataset. ---
+--- sys.status0_b5 not in new dataset. ---
+--- sys.status_b5 not in new dataset. ---
+--- sys.temp_clock not in new dataset. ---
+--- sys.temp_mag not in new dataset. ---
+--- sys.temp_press not in new dataset. ---
+--- sys.xmit_energy not in new dataset. ---
+--- sys.xmit_energy_b5 not in new dataset. ---
+    vel OK!
+    vel_b5 OK!
+
+*********************************
+Checking data for VelEchoBT01...
+Property 'rotate_vars' does not match
+    dist_bt OK!
+### ECHO DOES NOT MATCH ###
+    env.c_sound OK!
+    env.c_sound_bt OK!
+    env.c_sound_echo OK!
+--- env.press not in new dataset. ---
+--- env.press_bt not in new dataset. ---
+--- env.press_echo not in new dataset. ---
+    env.temp OK!
+    env.temp_bt OK!
+    env.temp_echo OK!
+--- fom_bt not in new dataset. ---
+--- mpltime not in new dataset. ---
+--- mpltime_b5 not in new dataset. ---
+--- mpltime_bt not in new dataset. ---
+--- mpltime_echo not in new dataset. ---
+    orient.accel OK!
+    orient.accel_b5 OK!
+    orient.accel_bt OK!
+    orient.accel_echo OK!
+    orient.angrt OK!
+    orient.angrt_b5 OK!
+    orient.angrt_bt OK!
+    orient.angrt_echo OK!
+    orient.heading_bt OK!
+    orient.heading_echo OK!
+### ORIENT.MAG DOES NOT MATCH ###
+### ORIENT.MAG_B5 DOES NOT MATCH ###
+    orient.mag_bt OK!
+### ORIENT.MAG_ECHO DOES NOT MATCH ###
+--- orient.orient_up not in new dataset. ---
+    orient.orientmat OK!
+    orient.orientmat_b5 OK!
+    orient.orientmat_bt OK!
+    orient.orientmat_echo OK!
+    orient.pitch_bt OK!
+    orient.pitch_echo OK!
+    orient.quaternion OK!
+    orient.quaternion_b5 OK!
+    orient.quaternion_bt OK!
+    orient.quaternion_echo OK!
+    orient.raw.heading OK!
+    orient.raw.pitch OK!
+    orient.raw.roll OK!
+    orient.roll_bt OK!
+    orient.roll_echo OK!
+    range OK!
+    range_b5 OK!
+    signal.amp OK!
+    signal.amp_b5 OK!
+    signal.corr OK!
+    signal.corr_b5 OK!
+--- sys.ambig_vel not in new dataset. ---
+--- sys.ambig_vel_b5 not in new dataset. ---
+--- sys.ambig_vel_bt not in new dataset. ---
+--- sys.ambig_vel_echo not in new dataset. ---
+--- sys.batt_V not in new dataset. ---
+--- sys.batt_V_bt not in new dataset. ---
+--- sys.batt_V_echo not in new dataset. ---
+--- sys.ensemble not in new dataset. ---
+--- sys.ensemble_b5 not in new dataset. ---
+--- sys.ensemble_bt not in new dataset. ---
+--- sys.ensemble_echo not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.error_b5 not in new dataset. ---
+--- sys.error_bt not in new dataset. ---
+--- sys.error_echo not in new dataset. ---
+--- sys.status not in new dataset. ---
+--- sys.status0 not in new dataset. ---
+--- sys.status0_b5 not in new dataset. ---
+--- sys.status0_echo not in new dataset. ---
+--- sys.status_b5 not in new dataset. ---
+--- sys.status_bt not in new dataset. ---
+--- sys.status_echo not in new dataset. ---
+--- sys.temp_clock not in new dataset. ---
+--- sys.temp_clock_bt not in new dataset. ---
+--- sys.temp_clock_echo not in new dataset. ---
+--- sys.temp_mag not in new dataset. ---
+--- sys.temp_mag_bt not in new dataset. ---
+--- sys.temp_mag_echo not in new dataset. ---
+--- sys.temp_press not in new dataset. ---
+--- sys.temp_press_echo not in new dataset. ---
+--- sys.xmit_energy not in new dataset. ---
+--- sys.xmit_energy_b5 not in new dataset. ---
+--- sys.xmit_energy_bt not in new dataset. ---
+--- sys.xmit_energy_echo not in new dataset. ---
+    vel OK!
+    vel_b5 OK!
+    vel_bt OK!
+### RANGE_ECHO DOES NOT MATCH ###
+
+*********************************
+Checking data for VelEchoBT01_rotate_beam2inst...
+Property 'rotate_vars' does not match
+    dist_bt OK!
+### ECHO DOES NOT MATCH ###
+    env.c_sound OK!
+    env.c_sound_bt OK!
+    env.c_sound_echo OK!
+--- env.press not in new dataset. ---
+--- env.press_bt not in new dataset. ---
+--- env.press_echo not in new dataset. ---
+    env.temp OK!
+    env.temp_bt OK!
+    env.temp_echo OK!
+--- fom_bt not in new dataset. ---
+--- mpltime not in new dataset. ---
+--- mpltime_b5 not in new dataset. ---
+--- mpltime_bt not in new dataset. ---
+--- mpltime_echo not in new dataset. ---
+    orient.accel OK!
+    orient.accel_b5 OK!
+    orient.accel_bt OK!
+    orient.accel_echo OK!
+    orient.angrt OK!
+    orient.angrt_b5 OK!
+    orient.angrt_bt OK!
+    orient.angrt_echo OK!
+    orient.heading_bt OK!
+    orient.heading_echo OK!
+### ORIENT.MAG DOES NOT MATCH ###
+### ORIENT.MAG_B5 DOES NOT MATCH ###
+    orient.mag_bt OK!
+### ORIENT.MAG_ECHO DOES NOT MATCH ###
+--- orient.orient_up not in new dataset. ---
+    orient.orientmat OK!
+    orient.orientmat_b5 OK!
+    orient.orientmat_bt OK!
+    orient.orientmat_echo OK!
+    orient.pitch_bt OK!
+    orient.pitch_echo OK!
+    orient.quaternion OK!
+    orient.quaternion_b5 OK!
+    orient.quaternion_bt OK!
+    orient.quaternion_echo OK!
+    orient.raw.heading OK!
+    orient.raw.pitch OK!
+    orient.raw.roll OK!
+    orient.roll_bt OK!
+    orient.roll_echo OK!
+    range OK!
+    range_b5 OK!
+    signal.amp OK!
+    signal.amp_b5 OK!
+    signal.corr OK!
+    signal.corr_b5 OK!
+--- sys.ambig_vel not in new dataset. ---
+--- sys.ambig_vel_b5 not in new dataset. ---
+--- sys.ambig_vel_bt not in new dataset. ---
+--- sys.ambig_vel_echo not in new dataset. ---
+--- sys.batt_V not in new dataset. ---
+--- sys.batt_V_bt not in new dataset. ---
+--- sys.batt_V_echo not in new dataset. ---
+--- sys.ensemble not in new dataset. ---
+--- sys.ensemble_b5 not in new dataset. ---
+--- sys.ensemble_bt not in new dataset. ---
+--- sys.ensemble_echo not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.error_b5 not in new dataset. ---
+--- sys.error_bt not in new dataset. ---
+--- sys.error_echo not in new dataset. ---
+--- sys.status not in new dataset. ---
+--- sys.status0 not in new dataset. ---
+--- sys.status0_b5 not in new dataset. ---
+--- sys.status0_echo not in new dataset. ---
+--- sys.status_b5 not in new dataset. ---
+--- sys.status_bt not in new dataset. ---
+--- sys.status_echo not in new dataset. ---
+--- sys.temp_clock not in new dataset. ---
+--- sys.temp_clock_bt not in new dataset. ---
+--- sys.temp_clock_echo not in new dataset. ---
+--- sys.temp_mag not in new dataset. ---
+--- sys.temp_mag_bt not in new dataset. ---
+--- sys.temp_mag_echo not in new dataset. ---
+--- sys.temp_press not in new dataset. ---
+--- sys.temp_press_echo not in new dataset. ---
+--- sys.xmit_energy not in new dataset. ---
+--- sys.xmit_energy_b5 not in new dataset. ---
+--- sys.xmit_energy_bt not in new dataset. ---
+--- sys.xmit_energy_echo not in new dataset. ---
+    vel OK!
+    vel_b5 OK!
+    vel_bt OK!
+### RANGE_ECHO DOES NOT MATCH ###
+
+*********************************
+Checking data for burst_mode01...
+Property 'inst_model' does not match
+### ENV.C_SOUND DOES NOT MATCH ###
+    env.pressure OK!
+### ENV.TEMP DOES NOT MATCH ###
+--- mpltime not in new dataset. ---
+### ORIENT.ORIENTMAT DOES NOT MATCH ###
+    signal.amp OK!
+    signal.corr OK!
+--- sys.batt not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.status not in new dataset. ---
+    vel OK!
+
+*********************************
+Checking data for vector_data01...
+Property 'inst_model' does not match
+### ENV.C_SOUND DOES NOT MATCH ###
+    env.pressure OK!
+### ENV.TEMP DOES NOT MATCH ###
+--- mpltime not in new dataset. ---
+### ORIENT.ORIENTMAT DOES NOT MATCH ###
+### ORIENT.RAW.HEADING DOES NOT MATCH ###
+    orient.raw.orientation_down OK!
+### ORIENT.RAW.PITCH DOES NOT MATCH ###
+### ORIENT.RAW.ROLL DOES NOT MATCH ###
+    signal.amp OK!
+    signal.corr OK!
+--- sys.batt not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.status not in new dataset. ---
+    vel OK!
+
+*********************************
+Checking data for vector_data01_bin...
+Property 'Itke_thresh' NOT FOUND in new dataset
+Property 'inst_model' does not match
+Property 'n_fft_coh' does not match
+    Spec.omega OK!
+--- Spec.vel not in new dataset. ---
+    env.c_sound OK!
+    env.pressure OK!
+    env.temp OK!
+--- mpltime not in new dataset. ---
+### ORIENT.ORIENTMAT DOES NOT MATCH ###
+--- sigma_Uh not in new dataset. ---
+    signal.amp OK!
+    signal.corr OK!
+### STRESS DOES NOT MATCH ###
+--- sys.batt not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.status not in new dataset. ---
+### TKE_VEC DOES NOT MATCH ###
+    vel OK!
+
+*********************************
+Checking data for vector_data01_rotate_earth2principal...
+Property 'inst_model' does not match
+Property 'principal_heading' does not match
+### ENV.C_SOUND DOES NOT MATCH ###
+    env.pressure OK!
+### ENV.TEMP DOES NOT MATCH ###
+--- mpltime not in new dataset. ---
+### ORIENT.ORIENTMAT DOES NOT MATCH ###
+    signal.amp OK!
+    signal.corr OK!
+--- sys.batt not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.status not in new dataset. ---
+### VEL DOES NOT MATCH ###
+
+*********************************
+Checking data for vector_data01_rotate_inst2beam...
+Property 'inst_model' does not match
+### ENV.C_SOUND DOES NOT MATCH ###
+    env.pressure OK!
+### ENV.TEMP DOES NOT MATCH ###
+--- mpltime not in new dataset. ---
+### ORIENT.ORIENTMAT DOES NOT MATCH ###
+    signal.amp OK!
+    signal.corr OK!
+--- sys.batt not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.status not in new dataset. ---
+    vel OK!
+
+*********************************
+Checking data for vector_data01_rotate_inst2earth...
+Property 'inst_model' does not match
+### ENV.C_SOUND DOES NOT MATCH ###
+    env.pressure OK!
+### ENV.TEMP DOES NOT MATCH ###
+--- mpltime not in new dataset. ---
+### ORIENT.ORIENTMAT DOES NOT MATCH ###
+    signal.amp OK!
+    signal.corr OK!
+--- sys.batt not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.status not in new dataset. ---
+### VEL DOES NOT MATCH ###
+
+*********************************
+Checking data for vector_data01_subset...### NO DOLfYN 1.0 FILE ###
+
+*********************************
+Checking data for vector_data01_uclean...### NO DOLfYN 1.0 FILE ###
+
+*********************************
+Checking data for vector_data_imu01-json...
+Property 'inst2head_rotmat' NOT FOUND in new dataset
+Property 'inst_model' does not match
+Property 'motion accel_filtfreq Hz' NOT FOUND in new dataset
+Property 'rotate_vars' does not match
+### ENV.C_SOUND DOES NOT MATCH ###
+    env.pressure OK!
+### ENV.TEMP DOES NOT MATCH ###
+--- mpltime not in new dataset. ---
+    orient.accel OK!
+    orient.angrt OK!
+    orient.mag OK!
+    orient.orientmat OK!
+    signal.amp OK!
+    signal.corr OK!
+--- sys.batt not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.status not in new dataset. ---
+    vel OK!
+
+*********************************
+Checking data for vector_data_imu01-json_mc...
+Property 'inst2head_rotmat' NOT FOUND in new dataset
+Property 'inst_model' does not match
+Property 'motion accel_filtfreq Hz' NOT FOUND in new dataset
+Property 'motion corrected' NOT FOUND in new dataset
+Property 'rotate_vars' does not match
+### ENV.C_SOUND DOES NOT MATCH ###
+    env.pressure OK!
+### ENV.TEMP DOES NOT MATCH ###
+--- mpltime not in new dataset. ---
+    orient.accel OK!
+### ORIENT.ACCLOW DOES NOT MATCH ###
+    orient.angrt OK!
+    orient.mag OK!
+    orient.orientmat OK!
+### ORIENT.VELACC DOES NOT MATCH ###
+    orient.velrot OK!
+    signal.amp OK!
+    signal.corr OK!
+--- sys.batt not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.status not in new dataset. ---
+### VEL DOES NOT MATCH ###
+--- velraw not in new dataset. ---
+
+*********************************
+Checking data for vector_data_imu01...
+Property 'inst2head_rotmat' NOT FOUND in new dataset
+Property 'inst_model' does not match
+Property 'rotate_vars' does not match
+### ENV.C_SOUND DOES NOT MATCH ###
+    env.pressure OK!
+### ENV.TEMP DOES NOT MATCH ###
+--- mpltime not in new dataset. ---
+    orient.accel OK!
+    orient.angrt OK!
+    orient.mag OK!
+    orient.orientmat OK!
+    signal.amp OK!
+    signal.corr OK!
+--- sys.batt not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.status not in new dataset. ---
+    vel OK!
+
+*********************************
+Checking data for vector_data_imu01_head_pitch_roll...
+Property 'inst2head_rotmat' NOT FOUND in new dataset
+Property 'inst_model' does not match
+Property 'rotate_vars' does not match
+### ENV.C_SOUND DOES NOT MATCH ###
+    env.pressure OK!
+### ENV.TEMP DOES NOT MATCH ###
+--- mpltime not in new dataset. ---
+    orient.accel OK!
+    orient.angrt OK!
+    orient.heading OK!
+    orient.mag OK!
+    orient.orientmat OK!
+    orient.pitch OK!
+    orient.roll OK!
+    signal.amp OK!
+    signal.corr OK!
+--- sys.batt not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.status not in new dataset. ---
+    vel OK!
+
+*********************************
+Checking data for vector_data_imu01_mc...
+Property 'inst2head_rotmat' NOT FOUND in new dataset
+Property 'inst_model' does not match
+Property 'motion accel_filtfreq Hz' NOT FOUND in new dataset
+Property 'motion corrected' NOT FOUND in new dataset
+Property 'rotate_vars' does not match
+### ENV.C_SOUND DOES NOT MATCH ###
+    env.pressure OK!
+### ENV.TEMP DOES NOT MATCH ###
+--- mpltime not in new dataset. ---
+    orient.accel OK!
+### ORIENT.ACCLOW DOES NOT MATCH ###
+    orient.angrt OK!
+    orient.mag OK!
+    orient.orientmat OK!
+### ORIENT.VELACC DOES NOT MATCH ###
+    orient.velrot OK!
+    signal.amp OK!
+    signal.corr OK!
+--- sys.batt not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.status not in new dataset. ---
+### VEL DOES NOT MATCH ###
+--- velraw not in new dataset. ---
+
+*********************************
+Checking data for vector_data_imu01_mcDeclin10...
+Property 'inst2head_rotmat' NOT FOUND in new dataset
+Property 'inst_model' does not match
+Property 'motion accel_filtfreq Hz' NOT FOUND in new dataset
+Property 'motion corrected' NOT FOUND in new dataset
+Property 'rotate_vars' does not match
+### ENV.C_SOUND DOES NOT MATCH ###
+    env.pressure OK!
+### ENV.TEMP DOES NOT MATCH ###
+--- mpltime not in new dataset. ---
+    orient.accel OK!
+### ORIENT.ACCLOW DOES NOT MATCH ###
+    orient.angrt OK!
+    orient.mag OK!
+    orient.orientmat OK!
+### ORIENT.VELACC DOES NOT MATCH ###
+    orient.velrot OK!
+    signal.amp OK!
+    signal.corr OK!
+--- sys.batt not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.status not in new dataset. ---
+### VEL DOES NOT MATCH ###
+--- velraw not in new dataset. ---
+
+*********************************
+Checking data for vector_data_imu01_rotate_earth2principal...
+Property 'inst2head_rotmat' NOT FOUND in new dataset
+Property 'inst_model' does not match
+Property 'principal_heading' does not match
+Property 'rotate_vars' does not match
+### ENV.C_SOUND DOES NOT MATCH ###
+    env.pressure OK!
+### ENV.TEMP DOES NOT MATCH ###
+--- mpltime not in new dataset. ---
+### ORIENT.ACCEL DOES NOT MATCH ###
+### ORIENT.ANGRT DOES NOT MATCH ###
+### ORIENT.MAG DOES NOT MATCH ###
+    orient.orientmat OK!
+    signal.amp OK!
+    signal.corr OK!
+--- sys.batt not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.status not in new dataset. ---
+### VEL DOES NOT MATCH ###
+
+*********************************
+Checking data for vector_data_imu01_rotate_inst2beam...
+Property 'inst2head_rotmat' NOT FOUND in new dataset
+Property 'inst_model' does not match
+Property 'rotate_vars' does not match
+### ENV.C_SOUND DOES NOT MATCH ###
+    env.pressure OK!
+### ENV.TEMP DOES NOT MATCH ###
+--- mpltime not in new dataset. ---
+    orient.accel OK!
+    orient.angrt OK!
+    orient.mag OK!
+    orient.orientmat OK!
+    signal.amp OK!
+    signal.corr OK!
+--- sys.batt not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.status not in new dataset. ---
+    vel OK!
+
+*********************************
+Checking data for vector_data_imu01_rotate_inst2earth...
+Property 'inst2head_rotmat' NOT FOUND in new dataset
+Property 'inst_model' does not match
+Property 'rotate_vars' does not match
+### ENV.C_SOUND DOES NOT MATCH ###
+    env.pressure OK!
+### ENV.TEMP DOES NOT MATCH ###
+--- mpltime not in new dataset. ---
+    orient.accel OK!
+    orient.angrt OK!
+    orient.mag OK!
+    orient.orientmat OK!
+    signal.amp OK!
+    signal.corr OK!
+--- sys.batt not in new dataset. ---
+--- sys.error not in new dataset. ---
+--- sys.status not in new dataset. ---
+    vel OK!
+
+*********************************
+Checking data for winriver01...
+Property 'inst_make' does not match
+Property 'inst_model' does not match
+Property 'rotate_vars' does not match
+--- bt_range not in new dataset. ---
+--- bt_vel not in new dataset. ---
+--- depth_m not in new dataset. ---
+    env.salinity OK!
+--- env.temperature_C not in new dataset. ---
+--- gtime not in new dataset. ---
+--- mpltime not in new dataset. ---
+--- orient.glatitude not in new dataset. ---
+--- orient.glongitude not in new dataset. ---
+    orient.orientmat OK!
+    range OK!
+--- signal.bt_ampl not in new dataset. ---
+--- signal.bt_corr not in new dataset. ---
+--- signal.bt_perc_gd not in new dataset. ---
+    signal.corr OK!
+--- signal.echo not in new dataset. ---
+    signal.prcnt_gd OK!
+--- sys.adc not in new dataset. ---
+--- sys.bit not in new dataset. ---
+--- sys.mpt_sec not in new dataset. ---
+--- sys.number not in new dataset. ---
+--- sys.rtc not in new dataset. ---
+--- sys.ssp not in new dataset. ---
+### VEL DOES NOT MATCH ###
+
+*********************************
+Checking data for winriver02...
+Property 'inst_make' does not match
+Property 'inst_model' does not match
+Property 'rotate_vars' does not match
+--- bt_range not in new dataset. ---
+--- bt_vel not in new dataset. ---
+--- depth_m not in new dataset. ---
+    env.salinity OK!
+--- env.temperature_C not in new dataset. ---
+--- gtime not in new dataset. ---
+--- mpltime not in new dataset. ---
+--- orient.glatitude not in new dataset. ---
+--- orient.glongitude not in new dataset. ---
+    orient.orientmat OK!
+    range OK!
+--- signal.bt_ampl not in new dataset. ---
+--- signal.bt_corr not in new dataset. ---
+--- signal.bt_perc_gd not in new dataset. ---
+    signal.corr OK!
+--- signal.echo not in new dataset. ---
+    signal.prcnt_gd OK!
+--- sys.adc not in new dataset. ---
+--- sys.bit not in new dataset. ---
+--- sys.mpt_sec not in new dataset. ---
+--- sys.number not in new dataset. ---
+--- sys.rtc not in new dataset. ---
+--- sys.ssp not in new dataset. ---
+### VEL DOES NOT MATCH ###
+
+*********************************
+Checking data for winriver02_rotate_ship2earth...
+Property 'inst2earth:fixed' NOT FOUND in new dataset
+Property 'inst_make' does not match
+Property 'inst_model' does not match
+Property 'rotate_vars' does not match
+--- bt_range not in new dataset. ---
+--- bt_vel not in new dataset. ---
+--- depth_m not in new dataset. ---
+    env.salinity OK!
+--- env.temperature_C not in new dataset. ---
+--- gtime not in new dataset. ---
+--- mpltime not in new dataset. ---
+--- orient.glatitude not in new dataset. ---
+--- orient.glongitude not in new dataset. ---
+    orient.orientmat OK!
+    range OK!
+--- signal.bt_ampl not in new dataset. ---
+--- signal.bt_corr not in new dataset. ---
+--- signal.bt_perc_gd not in new dataset. ---
+    signal.corr OK!
+--- signal.echo not in new dataset. ---
+    signal.prcnt_gd OK!
+--- sys.adc not in new dataset. ---
+--- sys.bit not in new dataset. ---
+--- sys.mpt_sec not in new dataset. ---
+--- sys.number not in new dataset. ---
+--- sys.rtc not in new dataset. ---
+--- sys.ssp not in new dataset. ---
+### VEL DOES NOT MATCH ###
