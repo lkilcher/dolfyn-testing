@@ -12,8 +12,8 @@ Checking data for AWAC_test01_earth2inst...
     range OK!
     signal.amp OK!
 --- sys.Error not in new dataset.
---- sys.batt not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.status OK!
 ### VEL DOES NOT MATCH
 
 *********************************
@@ -28,8 +28,8 @@ Property 'principal_heading' does not match
     range OK!
     signal.amp OK!
 --- sys.Error not in new dataset.
---- sys.batt not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.status OK!
 ### VEL DOES NOT MATCH
 
 *********************************
@@ -42,8 +42,8 @@ Checking data for AWAC_test01_inst2beam...
     range OK!
     signal.amp OK!
 --- sys.Error not in new dataset.
---- sys.batt not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.status OK!
 ### VEL DOES NOT MATCH
 
 *********************************
@@ -56,8 +56,8 @@ Checking data for AWAC_test01_ud...
     range OK!
     signal.amp OK!
 --- sys.Error not in new dataset.
---- sys.batt not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.status OK!
 ### VEL DOES NOT MATCH
 
 *********************************
@@ -372,11 +372,11 @@ Property 'inst_model' does not match
 --- env.temperature_C not in new dataset.
     orient.orientmat OK!
     orient.raw.heading OK!
---- orient.raw.heading_std not in new dataset.
+    orient.raw.heading_std OK!
     orient.raw.pitch OK!
---- orient.raw.pitch_std not in new dataset.
+    orient.raw.pitch_std OK!
     orient.raw.roll OK!
---- orient.raw.roll_std not in new dataset.
+    orient.raw.roll_std OK!
     range OK!
     signal.corr OK!
 --- signal.echo not in new dataset.
@@ -384,7 +384,7 @@ Property 'inst_model' does not match
 --- sys.adc not in new dataset.
 --- sys.bit not in new dataset.
 --- sys.mpt_sec not in new dataset.
---- sys.number not in new dataset.
+    sys.number OK!
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
     vel OK!
@@ -405,7 +405,7 @@ Property 'inst_model' does not match
 --- sys.adc not in new dataset.
 --- sys.bit not in new dataset.
 --- sys.mpt_sec not in new dataset.
---- sys.number not in new dataset.
+    sys.number OK!
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
     vel OK!
@@ -429,7 +429,7 @@ Property 'principal_heading' does not match
 --- sys.adc not in new dataset.
 --- sys.bit not in new dataset.
 --- sys.mpt_sec not in new dataset.
---- sys.number not in new dataset.
+    sys.number OK!
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
 ### VEL DOES NOT MATCH
@@ -451,7 +451,7 @@ Property 'inst_model' does not match
 --- sys.adc not in new dataset.
 --- sys.bit not in new dataset.
 --- sys.mpt_sec not in new dataset.
---- sys.number not in new dataset.
+    sys.number OK!
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
     vel OK!
@@ -478,7 +478,7 @@ Property 'rotate_vars' does not match
 --- sys.adc not in new dataset.
 --- sys.bit not in new dataset.
 --- sys.mpt_sec not in new dataset.
---- sys.number not in new dataset.
+    sys.number OK!
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
     vel OK!
@@ -869,9 +869,9 @@ Property 'inst_model' does not match
 ### ORIENT.ORIENTMAT DOES NOT MATCH
     signal.amp OK!
     signal.corr OK!
---- sys.batt not in new dataset.
---- sys.error not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.error OK!
+    sys.status OK!
     vel OK!
 
 *********************************
@@ -888,9 +888,9 @@ Property 'inst_model' does not match
 ### ORIENT.RAW.ROLL DOES NOT MATCH
     signal.amp OK!
     signal.corr OK!
---- sys.batt not in new dataset.
---- sys.error not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.error OK!
+    sys.status OK!
     vel OK!
 
 *********************************
@@ -909,9 +909,9 @@ Property 'n_fft_coh' does not match
     signal.amp OK!
     signal.corr OK!
 ### STRESS DOES NOT MATCH
---- sys.batt not in new dataset.
---- sys.error not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.error OK!
+    sys.status OK!
 ### TKE_VEC DOES NOT MATCH
     vel OK!
 
@@ -926,9 +926,9 @@ Property 'principal_heading' does not match
 ### ORIENT.ORIENTMAT DOES NOT MATCH
     signal.amp OK!
     signal.corr OK!
---- sys.batt not in new dataset.
---- sys.error not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.error OK!
+    sys.status OK!
 ### VEL DOES NOT MATCH
 
 *********************************
@@ -941,9 +941,9 @@ Property 'inst_model' does not match
 ### ORIENT.ORIENTMAT DOES NOT MATCH
     signal.amp OK!
     signal.corr OK!
---- sys.batt not in new dataset.
---- sys.error not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.error OK!
+    sys.status OK!
     vel OK!
 
 *********************************
@@ -956,9 +956,9 @@ Property 'inst_model' does not match
 ### ORIENT.ORIENTMAT DOES NOT MATCH
     signal.amp OK!
     signal.corr OK!
---- sys.batt not in new dataset.
---- sys.error not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.error OK!
+    sys.status OK!
 ### VEL DOES NOT MATCH
 
 *********************************
@@ -983,9 +983,9 @@ Property 'rotate_vars' does not match
     orient.orientmat OK!
     signal.amp OK!
     signal.corr OK!
---- sys.batt not in new dataset.
---- sys.error not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.error OK!
+    sys.status OK!
     vel OK!
 
 *********************************
@@ -1008,9 +1008,9 @@ Property 'rotate_vars' does not match
     orient.velrot OK!
     signal.amp OK!
     signal.corr OK!
---- sys.batt not in new dataset.
---- sys.error not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.error OK!
+    sys.status OK!
 ### VEL DOES NOT MATCH
 --- velraw not in new dataset.
 
@@ -1029,9 +1029,9 @@ Property 'rotate_vars' does not match
     orient.orientmat OK!
     signal.amp OK!
     signal.corr OK!
---- sys.batt not in new dataset.
---- sys.error not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.error OK!
+    sys.status OK!
     vel OK!
 
 *********************************
@@ -1052,9 +1052,9 @@ Property 'rotate_vars' does not match
     orient.roll OK!
     signal.amp OK!
     signal.corr OK!
---- sys.batt not in new dataset.
---- sys.error not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.error OK!
+    sys.status OK!
     vel OK!
 
 *********************************
@@ -1077,9 +1077,9 @@ Property 'rotate_vars' does not match
     orient.velrot OK!
     signal.amp OK!
     signal.corr OK!
---- sys.batt not in new dataset.
---- sys.error not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.error OK!
+    sys.status OK!
 ### VEL DOES NOT MATCH
 --- velraw not in new dataset.
 
@@ -1103,9 +1103,9 @@ Property 'rotate_vars' does not match
     orient.velrot OK!
     signal.amp OK!
     signal.corr OK!
---- sys.batt not in new dataset.
---- sys.error not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.error OK!
+    sys.status OK!
 ### VEL DOES NOT MATCH
 --- velraw not in new dataset.
 
@@ -1125,9 +1125,9 @@ Property 'rotate_vars' does not match
     orient.orientmat OK!
     signal.amp OK!
     signal.corr OK!
---- sys.batt not in new dataset.
---- sys.error not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.error OK!
+    sys.status OK!
 ### VEL DOES NOT MATCH
 
 *********************************
@@ -1145,9 +1145,9 @@ Property 'rotate_vars' does not match
     orient.orientmat OK!
     signal.amp OK!
     signal.corr OK!
---- sys.batt not in new dataset.
---- sys.error not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.error OK!
+    sys.status OK!
     vel OK!
 
 *********************************
@@ -1165,9 +1165,9 @@ Property 'rotate_vars' does not match
     orient.orientmat OK!
     signal.amp OK!
     signal.corr OK!
---- sys.batt not in new dataset.
---- sys.error not in new dataset.
---- sys.status not in new dataset.
+    sys.batt OK!
+    sys.error OK!
+    sys.status OK!
     vel OK!
 
 *********************************
@@ -1195,7 +1195,7 @@ Property 'rotate_vars' does not match
 --- sys.adc not in new dataset.
 --- sys.bit not in new dataset.
 --- sys.mpt_sec not in new dataset.
---- sys.number not in new dataset.
+    sys.number OK!
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
     vel OK!
@@ -1225,7 +1225,7 @@ Property 'rotate_vars' does not match
 --- sys.adc not in new dataset.
 --- sys.bit not in new dataset.
 --- sys.mpt_sec not in new dataset.
---- sys.number not in new dataset.
+    sys.number OK!
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
     vel OK!
@@ -1256,7 +1256,7 @@ Property 'rotate_vars' does not match
 --- sys.adc not in new dataset.
 --- sys.bit not in new dataset.
 --- sys.mpt_sec not in new dataset.
---- sys.number not in new dataset.
+    sys.number OK!
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
 ### VEL DOES NOT MATCH
