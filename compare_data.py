@@ -34,8 +34,6 @@ def time2timestamp(time):
     return pd.to_datetime(tmp)
 
 
-
-
 def compare_file(fname):
     fnm = fname.rsplit('/')[-1].split('.')[0]
     print("")
@@ -112,7 +110,8 @@ def compare_data(data0, data1):
 
     t0 = np.array(date2epoch(list(num2date(data0.mpltime))))
     if np.allclose(t0, data1.time):
-        print("    TIME OK!".format(ky))
+        pass
+        #print("    TIME OK!".format(ky))
     else:
         print("!!! TIME DOES NOT MATCH !!!")
         
@@ -143,7 +142,8 @@ def compare_data(data0, data1):
             nm = 'spec'
         if nm in data1:
             if np.allclose(data1[nm], val, rtol=rtol, atol=atol, equal_nan=True):
-                print("    {} OK!".format(ky))
+                pass # Don't print matches.
+                #print("    {} OK!".format(ky))
             else:
                 print("### {} DOES NOT MATCH".format(ky.upper()))
                 if ky == 'range':
