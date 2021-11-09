@@ -4,24 +4,20 @@ Checking data for AWAC_test01... OK!
 
 *********************************
 Checking data for AWAC_test01_earth2inst...
---- sys.Error not in new dataset.
 ### VEL DOES NOT MATCH
 
 *********************************
 Checking data for AWAC_test01_earth2principal...
 Property 'coord_sys' does not match
 Property 'principal_heading' does not match
---- sys.Error not in new dataset.
 ### VEL DOES NOT MATCH
 
 *********************************
 Checking data for AWAC_test01_inst2beam...
---- sys.Error not in new dataset.
 ### VEL DOES NOT MATCH
 
 *********************************
 Checking data for AWAC_test01_ud...
---- sys.Error not in new dataset.
 ### VEL DOES NOT MATCH
 
 *********************************
@@ -257,78 +253,35 @@ Property 'rotate_vars' does not match
 ### VEL DOES NOT MATCH
 
 *********************************
-Checking data for RDI_test01...
-Property 'inst_make' does not match
-Property 'inst_model' does not match
---- depth_m not in new dataset.
---- env.temperature_C not in new dataset.
---- signal.echo not in new dataset.
---- sys.adc not in new dataset.
---- sys.bit not in new dataset.
---- sys.mpt_sec not in new dataset.
---- sys.rtc not in new dataset.
---- sys.ssp not in new dataset.
+Checking data for RDI_test01... OK!
 
 *********************************
-Checking data for RDI_test01_rotate_beam2inst...
-Property 'inst_make' does not match
-Property 'inst_model' does not match
---- depth_m not in new dataset.
---- env.temperature_C not in new dataset.
---- signal.echo not in new dataset.
---- sys.adc not in new dataset.
---- sys.bit not in new dataset.
---- sys.mpt_sec not in new dataset.
---- sys.rtc not in new dataset.
---- sys.ssp not in new dataset.
+Checking data for RDI_test01_rotate_beam2inst... OK!
 
 *********************************
 Checking data for RDI_test01_rotate_earth2principal...
 Property 'coord_sys' does not match
 Property 'inst2earth:fixed' NOT FOUND in new dataset
-Property 'inst_make' does not match
-Property 'inst_model' does not match
 Property 'principal_heading' does not match
---- depth_m not in new dataset.
---- env.temperature_C not in new dataset.
---- signal.echo not in new dataset.
 --- sys.adc not in new dataset.
 --- sys.bit not in new dataset.
---- sys.mpt_sec not in new dataset.
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
 ### VEL DOES NOT MATCH
 
 *********************************
-Checking data for RDI_test01_rotate_inst2earth...
-Property 'inst2earth:fixed' NOT FOUND in new dataset
-Property 'inst_make' does not match
-Property 'inst_model' does not match
---- depth_m not in new dataset.
---- env.temperature_C not in new dataset.
---- signal.echo not in new dataset.
---- sys.adc not in new dataset.
---- sys.bit not in new dataset.
---- sys.mpt_sec not in new dataset.
---- sys.rtc not in new dataset.
---- sys.ssp not in new dataset.
+Checking data for RDI_test01_rotate_inst2earth... OK!
 
 *********************************
 Checking data for RDI_withBT...
-Property 'inst_make' does not match
-Property 'inst_model' does not match
 Property 'rotate_vars' does not match
 --- bt_range not in new dataset.
 --- bt_vel not in new dataset.
---- depth_m not in new dataset.
---- env.temperature_C not in new dataset.
 --- signal.bt_ampl not in new dataset.
 --- signal.bt_corr not in new dataset.
 --- signal.bt_perc_gd not in new dataset.
---- signal.echo not in new dataset.
 --- sys.adc not in new dataset.
 --- sys.bit not in new dataset.
---- sys.mpt_sec not in new dataset.
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
 
@@ -667,68 +620,50 @@ Property 'rotate_vars' does not match
 
 *********************************
 Checking data for winriver01...
-Property 'inst_make' does not match
-Property 'inst_model' does not match
 Property 'rotate_vars' does not match
 --- bt_range not in new dataset.
 --- bt_vel not in new dataset.
---- depth_m not in new dataset.
---- env.temperature_C not in new dataset.
 --- gtime not in new dataset.
 --- orient.glatitude not in new dataset.
 --- orient.glongitude not in new dataset.
 --- signal.bt_ampl not in new dataset.
 --- signal.bt_corr not in new dataset.
 --- signal.bt_perc_gd not in new dataset.
---- signal.echo not in new dataset.
 --- sys.adc not in new dataset.
 --- sys.bit not in new dataset.
---- sys.mpt_sec not in new dataset.
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
 
 *********************************
 Checking data for winriver02...
-Property 'inst_make' does not match
-Property 'inst_model' does not match
 Property 'rotate_vars' does not match
 --- bt_range not in new dataset.
 --- bt_vel not in new dataset.
---- depth_m not in new dataset.
---- env.temperature_C not in new dataset.
 --- gtime not in new dataset.
 --- orient.glatitude not in new dataset.
 --- orient.glongitude not in new dataset.
 --- signal.bt_ampl not in new dataset.
 --- signal.bt_corr not in new dataset.
 --- signal.bt_perc_gd not in new dataset.
---- signal.echo not in new dataset.
 --- sys.adc not in new dataset.
 --- sys.bit not in new dataset.
---- sys.mpt_sec not in new dataset.
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
 
 *********************************
 Checking data for winriver02_rotate_ship2earth...
 Property 'inst2earth:fixed' NOT FOUND in new dataset
-Property 'inst_make' does not match
-Property 'inst_model' does not match
 Property 'rotate_vars' does not match
 --- bt_range not in new dataset.
 --- bt_vel not in new dataset.
---- depth_m not in new dataset.
---- env.temperature_C not in new dataset.
 --- gtime not in new dataset.
 --- orient.glatitude not in new dataset.
 --- orient.glongitude not in new dataset.
 --- signal.bt_ampl not in new dataset.
 --- signal.bt_corr not in new dataset.
 --- signal.bt_perc_gd not in new dataset.
---- signal.echo not in new dataset.
 --- sys.adc not in new dataset.
 --- sys.bit not in new dataset.
---- sys.mpt_sec not in new dataset.
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
 ### VEL DOES NOT MATCH

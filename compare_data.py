@@ -33,6 +33,13 @@ def time2timestamp(time):
         tmp[idx] = dt.fromtimestamp(t)
     return pd.to_datetime(tmp)
 
+aliases = [('Error', 'error'),
+           ('depth_m', 'depth'),
+           ('temperature_C', 'temp'),
+           ('echo', 'amp'),
+           ('mpt_sec', 'min_preping_wait'),
+           ]
+
 
 def compare_file(fname):
     fnm = fname.rsplit('/')[-1].split('.')[0]
@@ -76,6 +83,13 @@ def compare_data(data0, data1):
         if ky in ['inst_type']:
             if val0 == 'ADP':
                 val0 = 'ADCP'
+
+        ### Hard-code some exceptions...
+        if ky == 'inst_make' and val0 == 'RDI' and val1 == 'TRDI':
+            val0 = val1
+        if ky == 'inst_model' and val0 == '<WORKHORSE?>' and val1 == 'Workhorse':
+            val0 = val1
+            
         elif ky in ['rotate_vars', 'inst2head_vec']:
             val0 = list(val0)
         try:
@@ -140,6 +154,9 @@ def compare_data(data0, data1):
         nm = ky.rsplit('.')[-1]
         if ky == 'Spec.vel':
             nm = 'spec'
+        for nm0, nm1 in aliases:
+            if nm == nm0 and nm not in data1 and nm1 in data1:
+                nm = nm1
         if nm in data1:
             if np.allclose(data1[nm], val, rtol=rtol, atol=atol, equal_nan=True):
                 pass # Don't print matches.
