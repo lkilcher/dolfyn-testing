@@ -43,7 +43,9 @@ aliases = [('Error', 'error'),
            ('bt_ampl', 'amp_bt'),
            ('bt_corr', 'corr_bt'),
            ('bt_perc_gd', 'prcnt_gd_bt'),
-           ('bit', 'builtin_test_fail'), 
+           ('bit', 'builtin_test_fail'),
+           ('glatitude', 'latitude_gps'),
+           ('glongitude', 'longitude_gps'),
            ]
 
 
@@ -164,17 +166,32 @@ def compare_data(data0, data1):
         #print("    TIME OK!".format(ky))
     else:
         print("!!! TIME DOES NOT MATCH !!!")
+
+    if 'gtime' in data0:
+        unique_time, u_inds = np.unique(data0.gtime,
+                                        return_index=True)
+        for ky in ['glongitude', 'glatitude']:
+            data0['orient'][ky] = data0['orient'][ky][u_inds]
+        gdi = ~np.isnan(data0.orient.glongitude + data0.orient.glatitude)
+        data0.orient.glongitude = data0.orient.glongitude[gdi]
+        data0.orient.glatitude = data0.orient.glatitude[gdi]
+        
         
     for ky in data0.iter_data():
         val = data0[ky]
         # Default tolerances for np.allclose below
         rtol = 1e-5
         atol = 1e-8
-        
+        nm = ky.rsplit('.')[-1]
         if ky.startswith('config'):
             continue
-        elif ky in ['props', 'mpltime']:
+        elif ky in ['props', 'mpltime', 'gtime',]:
             continue
+        elif nm in ['glongitude', 'glatitude']:
+            if data1['longitude_gps'].shape != data0['orient.glongitude'].shape:
+                print("### {} dims do not match!".format(nm))
+                match = False
+                continue
         elif ky == 'env.temp' and data0.props['inst_model'] == 'AWAC':
             val /= 100
         elif ky.startswith('range'):
@@ -186,7 +203,6 @@ def compare_data(data0, data1):
                 val += data0.config['cell_size']
             #print(val - data1.range)
             atol = 5e-3
-        nm = ky.rsplit('.')[-1]
         if ky == 'Spec.vel':
             nm = 'spec'
         for nm0, nm1 in aliases:

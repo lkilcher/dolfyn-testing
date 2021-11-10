@@ -579,18 +579,14 @@ Checking data for vector_data_imu01_rotate_inst2earth... OK!
 
 *********************************
 Checking data for winriver01...
---- gtime not in new dataset.
---- orient.glatitude not in new dataset.
---- orient.glongitude not in new dataset.
 --- sys.adc not in new dataset.
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
 
 *********************************
 Checking data for winriver02...
---- gtime not in new dataset.
---- orient.glatitude not in new dataset.
---- orient.glongitude not in new dataset.
+### glatitude dims do not match!
+### glongitude dims do not match!
 --- sys.adc not in new dataset.
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
@@ -598,9 +594,8 @@ Checking data for winriver02...
 *********************************
 Checking data for winriver02_rotate_ship2earth...
 Property 'inst2earth:fixed' NOT FOUND in new dataset
---- gtime not in new dataset.
---- orient.glatitude not in new dataset.
---- orient.glongitude not in new dataset.
+### glatitude dims do not match!
+### glongitude dims do not match!
 --- sys.adc not in new dataset.
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
