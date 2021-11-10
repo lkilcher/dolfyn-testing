@@ -38,6 +38,12 @@ aliases = [('Error', 'error'),
            ('temperature_C', 'temp'),
            ('echo', 'amp'),
            ('mpt_sec', 'min_preping_wait'),
+           ('bt_range', 'dist_bt'),
+           ('bt_vel', 'vel_bt'),
+           ('bt_ampl', 'amp_bt'),
+           ('bt_corr', 'corr_bt'),
+           ('bt_perc_gd', 'prcnt_gd_bt'),
+           ('bit', 'builtin_test_fail'), 
            ]
 
 
@@ -91,7 +97,7 @@ def compare_data(data0, data1):
             val0 = val1
             
         elif ky in ['rotate_vars', 'inst2head_vec']:
-            val0 = list(val0)
+            val0 = [val if val != 'bt_vel' else 'vel_bt' for val in list(val0)]
         try:
             val1 = val1.tolist()
         except:

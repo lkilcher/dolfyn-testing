@@ -264,7 +264,6 @@ Property 'coord_sys' does not match
 Property 'inst2earth:fixed' NOT FOUND in new dataset
 Property 'principal_heading' does not match
 --- sys.adc not in new dataset.
---- sys.bit not in new dataset.
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
 ### VEL DOES NOT MATCH
@@ -273,17 +272,7 @@ Property 'principal_heading' does not match
 Checking data for RDI_test01_rotate_inst2earth... OK!
 
 *********************************
-Checking data for RDI_withBT...
-Property 'rotate_vars' does not match
---- bt_range not in new dataset.
---- bt_vel not in new dataset.
---- signal.bt_ampl not in new dataset.
---- signal.bt_corr not in new dataset.
---- signal.bt_perc_gd not in new dataset.
---- sys.adc not in new dataset.
---- sys.bit not in new dataset.
---- sys.rtc not in new dataset.
---- sys.ssp not in new dataset.
+Checking data for RDI_withBT... OK!
 
 *********************************
 Checking data for Sig1000_IMU...
@@ -619,51 +608,18 @@ Property 'inst_model' does not match
 Property 'rotate_vars' does not match
 
 *********************************
-Checking data for winriver01...
-Property 'rotate_vars' does not match
---- bt_range not in new dataset.
---- bt_vel not in new dataset.
---- gtime not in new dataset.
---- orient.glatitude not in new dataset.
---- orient.glongitude not in new dataset.
---- signal.bt_ampl not in new dataset.
---- signal.bt_corr not in new dataset.
---- signal.bt_perc_gd not in new dataset.
---- sys.adc not in new dataset.
---- sys.bit not in new dataset.
---- sys.rtc not in new dataset.
---- sys.ssp not in new dataset.
+Checking data for winriver01... OK!
 
 *********************************
-Checking data for winriver02...
-Property 'rotate_vars' does not match
---- bt_range not in new dataset.
---- bt_vel not in new dataset.
---- gtime not in new dataset.
---- orient.glatitude not in new dataset.
---- orient.glongitude not in new dataset.
---- signal.bt_ampl not in new dataset.
---- signal.bt_corr not in new dataset.
---- signal.bt_perc_gd not in new dataset.
---- sys.adc not in new dataset.
---- sys.bit not in new dataset.
---- sys.rtc not in new dataset.
---- sys.ssp not in new dataset.
+Checking data for winriver02... OK!
 
 *********************************
 Checking data for winriver02_rotate_ship2earth...
 Property 'inst2earth:fixed' NOT FOUND in new dataset
-Property 'rotate_vars' does not match
---- bt_range not in new dataset.
---- bt_vel not in new dataset.
 --- gtime not in new dataset.
 --- orient.glatitude not in new dataset.
 --- orient.glongitude not in new dataset.
---- signal.bt_ampl not in new dataset.
---- signal.bt_corr not in new dataset.
---- signal.bt_perc_gd not in new dataset.
 --- sys.adc not in new dataset.
---- sys.bit not in new dataset.
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
 ### VEL DOES NOT MATCH
