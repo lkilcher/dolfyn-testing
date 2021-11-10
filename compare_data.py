@@ -81,6 +81,10 @@ def compare_data(data0, data1):
     match = True
     for ky in data0.props:
         val0 = data0.props[ky]
+        if ky == 'inst2head_rotmat':
+            data0['inst2head_rotmat'] = val0
+            continue
+
         try:
             val1 = data1.attrs[ky.replace(' ', '_')]
         except KeyError:
@@ -93,11 +97,25 @@ def compare_data(data0, data1):
         ### Hard-code some exceptions...
         if ky == 'inst_make' and val0 == 'RDI' and val1 == 'TRDI':
             val0 = val1
-        if ky == 'inst_model' and val0 == '<WORKHORSE?>' and val1 == 'Workhorse':
-            val0 = val1
-            
-        elif ky in ['rotate_vars', 'inst2head_vec']:
-            val0 = [val if val != 'bt_vel' else 'vel_bt' for val in list(val0)]
+        if ky == 'inst_model':
+            val0 = val0.lower()
+            val1 = val1.lower()
+            if val0 == '<workhorse?>' and val1 == 'workhorse':
+                val0 = val1
+        elif ky == 'rotate_vars':
+            _tmp = []
+            for val in list(val0):
+                if val == 'bt_vel':
+                    _tmp.append('vel_bt')
+                elif val.startswith('orient.'):
+                    _tmp.append(val.split('.')[-1])
+                else:
+                    _tmp.append(val)
+            val0 = _tmp
+            val0.sort()
+            val1.sort()
+        elif ky == 'inst2head_vec':
+            val0 = list(val0)
         try:
             val1 = val1.tolist()
         except:
@@ -137,7 +155,6 @@ def compare_data(data0, data1):
         
     for ky in data0.iter_data():
         val = data0[ky]
-
         # Default tolerances for np.allclose below
         rtol = 1e-5
         atol = 1e-8

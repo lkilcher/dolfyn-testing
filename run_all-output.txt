@@ -484,20 +484,17 @@ Property 'rotate_vars' does not match
 
 *********************************
 Checking data for burst_mode01...
-Property 'inst_model' does not match
 ### ENV.TEMP DOES NOT MATCH
 ### ORIENT.ORIENTMAT DOES NOT MATCH
 
 *********************************
 Checking data for vector_data01...
-Property 'inst_model' does not match
 ### ORIENT.ORIENTMAT DOES NOT MATCH
 ### ORIENT.RAW.ROLL DOES NOT MATCH
 
 *********************************
 Checking data for vector_data01_bin...
 Property 'Itke_thresh' NOT FOUND in new dataset
-Property 'inst_model' does not match
 Property 'n_fft_coh' does not match
 --- Spec.vel not in new dataset.
 ### ORIENT.ORIENTMAT DOES NOT MATCH
@@ -507,19 +504,16 @@ Property 'n_fft_coh' does not match
 
 *********************************
 Checking data for vector_data01_rotate_earth2principal...
-Property 'inst_model' does not match
 Property 'principal_heading' does not match
 ### ORIENT.ORIENTMAT DOES NOT MATCH
 ### VEL DOES NOT MATCH
 
 *********************************
 Checking data for vector_data01_rotate_inst2beam...
-Property 'inst_model' does not match
 ### ORIENT.ORIENTMAT DOES NOT MATCH
 
 *********************************
 Checking data for vector_data01_rotate_inst2earth...
-Property 'inst_model' does not match
 ### ORIENT.ORIENTMAT DOES NOT MATCH
 ### VEL DOES NOT MATCH
 
@@ -530,16 +524,10 @@ Checking data for vector_data01_subset...### NO DOLfYN 1.0 FILE ###
 Checking data for vector_data01_uclean...### NO DOLfYN 1.0 FILE ###
 
 *********************************
-Checking data for vector_data_imu01-json...
-Property 'inst2head_rotmat' NOT FOUND in new dataset
-Property 'inst_model' does not match
-Property 'motion accel_filtfreq Hz' NOT FOUND in new dataset
-Property 'rotate_vars' does not match
+Checking data for vector_data_imu01-json... OK!
 
 *********************************
 Checking data for vector_data_imu01-json_mc...
-Property 'inst2head_rotmat' NOT FOUND in new dataset
-Property 'inst_model' does not match
 Property 'motion accel_filtfreq Hz' NOT FOUND in new dataset
 Property 'motion corrected' NOT FOUND in new dataset
 Property 'rotate_vars' does not match
@@ -549,21 +537,13 @@ Property 'rotate_vars' does not match
 --- velraw not in new dataset.
 
 *********************************
-Checking data for vector_data_imu01...
-Property 'inst2head_rotmat' NOT FOUND in new dataset
-Property 'inst_model' does not match
-Property 'rotate_vars' does not match
+Checking data for vector_data_imu01... OK!
 
 *********************************
-Checking data for vector_data_imu01_head_pitch_roll...
-Property 'inst2head_rotmat' NOT FOUND in new dataset
-Property 'inst_model' does not match
-Property 'rotate_vars' does not match
+Checking data for vector_data_imu01_head_pitch_roll... OK!
 
 *********************************
 Checking data for vector_data_imu01_mc...
-Property 'inst2head_rotmat' NOT FOUND in new dataset
-Property 'inst_model' does not match
 Property 'motion accel_filtfreq Hz' NOT FOUND in new dataset
 Property 'motion corrected' NOT FOUND in new dataset
 Property 'rotate_vars' does not match
@@ -574,8 +554,6 @@ Property 'rotate_vars' does not match
 
 *********************************
 Checking data for vector_data_imu01_mcDeclin10...
-Property 'inst2head_rotmat' NOT FOUND in new dataset
-Property 'inst_model' does not match
 Property 'motion accel_filtfreq Hz' NOT FOUND in new dataset
 Property 'motion corrected' NOT FOUND in new dataset
 Property 'rotate_vars' does not match
@@ -586,26 +564,17 @@ Property 'rotate_vars' does not match
 
 *********************************
 Checking data for vector_data_imu01_rotate_earth2principal...
-Property 'inst2head_rotmat' NOT FOUND in new dataset
-Property 'inst_model' does not match
 Property 'principal_heading' does not match
-Property 'rotate_vars' does not match
 ### ORIENT.ACCEL DOES NOT MATCH
 ### ORIENT.ANGRT DOES NOT MATCH
 ### ORIENT.MAG DOES NOT MATCH
 ### VEL DOES NOT MATCH
 
 *********************************
-Checking data for vector_data_imu01_rotate_inst2beam...
-Property 'inst2head_rotmat' NOT FOUND in new dataset
-Property 'inst_model' does not match
-Property 'rotate_vars' does not match
+Checking data for vector_data_imu01_rotate_inst2beam... OK!
 
 *********************************
-Checking data for vector_data_imu01_rotate_inst2earth...
-Property 'inst2head_rotmat' NOT FOUND in new dataset
-Property 'inst_model' does not match
-Property 'rotate_vars' does not match
+Checking data for vector_data_imu01_rotate_inst2earth... OK!
 
 *********************************
 Checking data for winriver01... OK!
