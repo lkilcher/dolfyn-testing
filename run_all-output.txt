@@ -3,8 +3,7 @@
 Checking data for AWAC_test01... OK!
 
 *********************************
-Checking data for AWAC_test01_earth2inst...
-### VEL DOES NOT MATCH
+Checking data for AWAC_test01_earth2inst... OK!
 
 *********************************
 Checking data for AWAC_test01_earth2principal...
@@ -13,12 +12,10 @@ Property 'principal_heading' does not match
 ### VEL DOES NOT MATCH
 
 *********************************
-Checking data for AWAC_test01_inst2beam...
-### VEL DOES NOT MATCH
+Checking data for AWAC_test01_inst2beam... OK!
 
 *********************************
-Checking data for AWAC_test01_ud...
-### VEL DOES NOT MATCH
+Checking data for AWAC_test01_ud... OK!
 
 *********************************
 Checking data for BenchFile01...
@@ -250,13 +247,18 @@ Property 'rotate_vars' does not match
 --- sys.temp_press not in new dataset.
 --- sys.xmit_energy not in new dataset.
 --- sys.xmit_energy_b5 not in new dataset.
-### VEL DOES NOT MATCH
 
 *********************************
-Checking data for RDI_test01... OK!
+Checking data for RDI_test01...
+--- sys.adc not in new dataset.
+--- sys.rtc not in new dataset.
+--- sys.ssp not in new dataset.
 
 *********************************
-Checking data for RDI_test01_rotate_beam2inst... OK!
+Checking data for RDI_test01_rotate_beam2inst...
+--- sys.adc not in new dataset.
+--- sys.rtc not in new dataset.
+--- sys.ssp not in new dataset.
 
 *********************************
 Checking data for RDI_test01_rotate_earth2principal...
@@ -269,10 +271,17 @@ Property 'principal_heading' does not match
 ### VEL DOES NOT MATCH
 
 *********************************
-Checking data for RDI_test01_rotate_inst2earth... OK!
+Checking data for RDI_test01_rotate_inst2earth...
+Property 'inst2earth:fixed' NOT FOUND in new dataset
+--- sys.adc not in new dataset.
+--- sys.rtc not in new dataset.
+--- sys.ssp not in new dataset.
 
 *********************************
-Checking data for RDI_withBT... OK!
+Checking data for RDI_withBT...
+--- sys.adc not in new dataset.
+--- sys.rtc not in new dataset.
+--- sys.ssp not in new dataset.
 
 *********************************
 Checking data for Sig1000_IMU...
@@ -515,7 +524,6 @@ Checking data for vector_data01_rotate_inst2beam...
 *********************************
 Checking data for vector_data01_rotate_inst2earth...
 ### ORIENT.ORIENTMAT DOES NOT MATCH
-### VEL DOES NOT MATCH
 
 *********************************
 Checking data for vector_data01_subset...### NO DOLfYN 1.0 FILE ###
@@ -577,10 +585,22 @@ Checking data for vector_data_imu01_rotate_inst2beam... OK!
 Checking data for vector_data_imu01_rotate_inst2earth... OK!
 
 *********************************
-Checking data for winriver01... OK!
+Checking data for winriver01...
+--- gtime not in new dataset.
+--- orient.glatitude not in new dataset.
+--- orient.glongitude not in new dataset.
+--- sys.adc not in new dataset.
+--- sys.rtc not in new dataset.
+--- sys.ssp not in new dataset.
 
 *********************************
-Checking data for winriver02... OK!
+Checking data for winriver02...
+--- gtime not in new dataset.
+--- orient.glatitude not in new dataset.
+--- orient.glongitude not in new dataset.
+--- sys.adc not in new dataset.
+--- sys.rtc not in new dataset.
+--- sys.ssp not in new dataset.
 
 *********************************
 Checking data for winriver02_rotate_ship2earth...
@@ -591,4 +611,3 @@ Property 'inst2earth:fixed' NOT FOUND in new dataset
 --- sys.adc not in new dataset.
 --- sys.rtc not in new dataset.
 --- sys.ssp not in new dataset.
-### VEL DOES NOT MATCH

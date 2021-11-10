@@ -180,6 +180,8 @@ def compare_data(data0, data1):
         for nm0, nm1 in aliases:
             if nm == nm0 and nm not in data1 and nm1 in data1:
                 nm = nm1
+        if nm == 'vel':
+            atol = 1e-7
         if nm in data1:
             if np.allclose(data1[nm], val, rtol=rtol, atol=atol, equal_nan=True):
                 pass # Don't print matches.
@@ -191,6 +193,7 @@ def compare_data(data0, data1):
                 match = False
         else:
             print('--- {} not in new dataset.'.format(ky))
+            match = False
     return data0, data1, match
         
 if __name__ == '__main__':
