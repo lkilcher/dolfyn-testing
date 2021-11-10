@@ -6,10 +6,7 @@ Checking data for AWAC_test01... OK!
 Checking data for AWAC_test01_earth2inst... OK!
 
 *********************************
-Checking data for AWAC_test01_earth2principal...
-Property 'coord_sys' does not match
-Property 'principal_heading' does not match
-### VEL DOES NOT MATCH
+Checking data for AWAC_test01_earth2principal... OK!
 
 *********************************
 Checking data for AWAC_test01_inst2beam... OK!
@@ -131,7 +128,6 @@ Property 'rotate_vars' does not match
 
 *********************************
 Checking data for BenchFile01_rotate_earth2principal...
-Property 'coord_sys' does not match
 Property 'principal_heading' does not match
 Property 'rotate_vars' does not match
 ### ALT.ALT_DIST DOES NOT MATCH
@@ -166,7 +162,6 @@ Property 'rotate_vars' does not match
 --- altraw.sys.temp_press not in new dataset.
 --- altraw.sys.xmit_energy not in new dataset.
 --- env.press not in new dataset.
---- mpltime_b5 not in new dataset.
 ### ORIENT.ACCEL DOES NOT MATCH
 ### ORIENT.ACCEL_B5 DOES NOT MATCH
 ### ORIENT.MAG DOES NOT MATCH
@@ -176,7 +171,6 @@ Property 'rotate_vars' does not match
 --- sys.ambig_vel_b5 not in new dataset.
 --- sys.batt_V not in new dataset.
 --- sys.ensemble not in new dataset.
---- sys.ensemble_b5 not in new dataset.
 --- sys.error not in new dataset.
 --- sys.error_b5 not in new dataset.
 --- sys.status not in new dataset.
@@ -262,7 +256,6 @@ Checking data for RDI_test01_rotate_beam2inst...
 
 *********************************
 Checking data for RDI_test01_rotate_earth2principal...
-Property 'coord_sys' does not match
 Property 'inst2earth:fixed' NOT FOUND in new dataset
 Property 'principal_heading' does not match
 --- sys.adc not in new dataset.

@@ -1,4 +1,4 @@
-from compare_data import compare_data, datadir, load1, load0, ALL_FILES
+from compare_data import compare_data, datadir, load1, load0, ALL_FILES, check_data
 
 from io import StringIO 
 import sys
@@ -26,6 +26,8 @@ for ffname in ALL_FILES:
     except FileNotFoundError:
         print("### NO DOLfYN 1.0 FILE ###")
         continue
+
+    data0, data1 = check_data(fnm, data0, data1)
 
     with Capturing() as output:
         data0, data1, match = compare_data(data0, data1)

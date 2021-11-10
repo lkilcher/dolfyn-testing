@@ -47,6 +47,18 @@ aliases = [('Error', 'error'),
            ]
 
 
+def check_data(fname, data0, data1):
+
+    if fname == 'AWAC_test01_earth2principal':
+        data0 = data0.subset[:500]
+        data0.rotate2('earth', inplace=True)
+        data0.props['principal_heading'] = round(dlfn0.calc_principal_heading(data0.vel.mean(1),
+                                                                        tidal_mode=False), 4)
+        data0.rotate2('principal', inplace=True)
+
+    return data0, data1
+
+
 def compare_file(fname):
     fnm = fname.rsplit('/')[-1].split('.')[0]
     print("")
