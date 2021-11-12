@@ -15,7 +15,7 @@ class Capturing(list):
 
 
 for ffname in ALL_FILES:
-    fnm = ffname.rsplit('/')[-1].split('.')[0]
+    fnm = ffname.replace('\\','/').rsplit('/')[-1].split('.')[0]
     print("")
     print("*********************************")
     print('Checking data for {}...'.format(fnm), end='')

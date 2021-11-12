@@ -4,8 +4,17 @@ To get started, first setup and activate a new virtual environment.
 
 Then, if using conda, you can do:
 
-    conda env update -f environment.yml
+    conda env create -f environment.yml
     pip install -r requirements.txt
+
+Troubleshooting dolfyn0 import error:
+
+    cd dolfyn/
+    pip install .
+
+Then move to "env/Lib/site-packages", find the directory labeled 
+"dolfyn" corresponding to "dolfyn0.egg*" directory, and rename
+"dolfyn" to "dolfyn0"
 
 Or -- if you're not using conda -- simply do:
     

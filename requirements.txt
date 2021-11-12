@@ -1,3 +1,2 @@
 -e git+https://github.com/jmcvey3/dolfyn.git@master#egg=dolfyn
 -e git+https://github.com/lkilcher/pyDictH5@dolfyn0-compare2-dolfyn1#egg=pyDictH5
-./dolfyn/

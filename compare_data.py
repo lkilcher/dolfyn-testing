@@ -46,6 +46,14 @@ aliases = [('Error', 'error'),
            ('bit', 'builtin_test_fail'),
            ('glatitude', 'latitude_gps'),
            ('glongitude', 'longitude_gps'),
+           ('ssp', 'c_sound'),
+           ('sigma_Uh', 'U_std'),
+           ('batt_V', 'batt'),
+           ('press', 'pressure'),
+           ('velraw', 'vel_raw'),
+           ('orient_up', 'orientation'),
+           ('ensemble', 'ensemble_count'),
+           ('erro', 'error'),
            ]
 
 
@@ -100,7 +108,10 @@ def compare_data(data0, data1):
             continue
 
         try:
-            val1 = data1.attrs[ky.replace(' ', '_')]
+            if ky=='motion accel_filtfreq Hz' or ky=='motion corrected':
+                pass
+            else:
+                val1 = data1.attrs[ky.replace(' ', '_')]
         except KeyError:
             print("Property '{}' NOT FOUND in new dataset".format(ky))
             continue
@@ -150,6 +161,10 @@ def compare_data(data0, data1):
         # I've decided this is inconequential. We're just truncating the data on the next line...
         pass
     data0 = data0.subset[:500]
+    
+    # Shortened VelEchoBT01.ad2cp since it only has 159 profiles
+    if data1.inst_type=='ADCP' and hasattr(data1, 'dist_bt'):
+        data0 = data0.subset[:100]
 
     # When we're dealing with very-short datasets (in time), data1 is often longer than data0
     if data0.shape[-1] < data1.time.shape[0]:
@@ -176,7 +191,6 @@ def compare_data(data0, data1):
         data0.orient.glongitude = data0.orient.glongitude[gdi]
         data0.orient.glatitude = data0.orient.glatitude[gdi]
         
-        
     for ky in data0.iter_data():
         val = data0[ky]
         # Default tolerances for np.allclose below
@@ -185,11 +199,13 @@ def compare_data(data0, data1):
         nm = ky.rsplit('.')[-1]
         if ky.startswith('config'):
             continue
-        elif ky in ['props', 'mpltime', 'gtime',]:
+        elif ky in ['props', 'gtime',]:
+            continue
+        elif 'mpltime' in ky:
             continue
         elif nm in ['glongitude', 'glatitude']:
             if data1['longitude_gps'].shape != data0['orient.glongitude'].shape:
-                print("### {} dims do not match!".format(nm))
+                print("### {} shapes do not match!".format(nm))
                 match = False
                 continue
         elif ky == 'env.temp' and data0.props['inst_model'] == 'AWAC':
@@ -203,21 +219,59 @@ def compare_data(data0, data1):
                 val += data0.config['cell_size']
             #print(val - data1.range)
             atol = 5e-3
-        if ky == 'Spec.vel':
-            nm = 'spec'
+        
+        if 'mag' in ky and data0.props['inst_model'].startswith('Sig'):
+            val = val/10
+
+        if 'sys.ensemble' in ky:
+            tg = ky[12:]
+            nm = 'ensemble_count' + tg
+        elif 'sys.batt_V' in ky:
+            tg = ky[10:]
+            nm = 'batt' + tg
+        elif ky == 'env.press':
+            tg = ky[9:]
+            nm = 'pressure' + tg
+            
+        elif ky == 'Spec.vel':
+            nm = 'psd'
+            
+        elif 'sys.xmit_energy' in ky:
+            if 'a' in ky:
+                # AST not working
+                pass
+            else:
+                tg = ky[15:]
+                nm = 'xmit_energy' + tg
+                val = np.median(val)
+        elif 'sys.ambig_vel' in ky:
+            if 'a' in ky:
+                # AST not working
+                pass
+            else:
+                tg = ky[13:]
+                nm = 'ambig_vel' + tg
+                val = np.median(val.copy())/1000
+            
         for nm0, nm1 in aliases:
             if nm == nm0 and nm not in data1 and nm1 in data1:
                 nm = nm1
         if nm == 'vel':
             atol = 1e-7
-        if nm in data1:
-            if np.allclose(data1[nm], val, rtol=rtol, atol=atol, equal_nan=True):
-                pass # Don't print matches.
-                #print("    {} OK!".format(ky))
+            
+        if hasattr(data1, nm):
+            if 'roll' in nm:
+                #roll is an xarray method
+                d = data1[nm]
+            else:
+                d = getattr(data1, nm)
+            if np.allclose(d, val, rtol=rtol, atol=atol, equal_nan=True):
+                    pass # Don't print matches.
+                    #print("    {} OK!".format(ky))
             else:
                 print("### {} DOES NOT MATCH".format(ky.upper()))
                 if ky == 'range':
-                    error
+                    raise Exception
                 match = False
         else:
             print('--- {} not in new dataset.'.format(ky))
