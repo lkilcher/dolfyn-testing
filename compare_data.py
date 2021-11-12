@@ -237,21 +237,13 @@ def compare_data(data0, data1):
             nm = 'psd'
             
         elif 'sys.xmit_energy' in ky:
-            if 'a' in ky:
-                # AST not working
-                pass
-            else:
-                tg = ky[15:]
-                nm = 'xmit_energy' + tg
-                val = np.median(val)
+            tg = ky[15:]
+            nm = 'xmit_energy' + tg
+            val = np.median(val)
         elif 'sys.ambig_vel' in ky:
-            if 'a' in ky:
-                # AST not working
-                pass
-            else:
-                tg = ky[13:]
-                nm = 'ambig_vel' + tg
-                val = np.median(val.copy())/1000
+            tg = ky[13:]
+            nm = 'ambig_vel' + tg
+            val = np.median(val.copy())/1000
             
         for nm0, nm1 in aliases:
             if nm == nm0 and nm not in data1 and nm1 in data1:
