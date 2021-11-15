@@ -269,7 +269,9 @@ def compare_data(data0, data1):
             data1[nm] = data1[nm].astype("float16")
 
         if nm == 'vel':
-            atol = 1e-7
+            atol = 1e-6
+        if nm == 'orientmat':
+            atol = 1e-6
             
         if hasattr(data1, nm):
             if 'roll' in nm:
