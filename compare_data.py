@@ -48,12 +48,12 @@ aliases = [('Error', 'error'),
            ('glongitude', 'longitude_gps'),
            ('ssp', 'c_sound'),
            ('sigma_Uh', 'U_std'),
-           ('batt_V', 'batt'),
            ('press', 'pressure'),
            ('velraw', 'vel_raw'),
            ('orient_up', 'orientation'),
            ('ensemble', 'ensemble_count'),
            ('erro', 'error'),
+           ('Error', 'error'),
            ]
 
 
@@ -219,23 +219,38 @@ def compare_data(data0, data1):
                 val += data0.config['cell_size']
             #print(val - data1.range)
             atol = 5e-3
-        
-        if 'mag' in ky and data0.props['inst_model'].startswith('Sig'):
-            val = val/10
 
-        if 'sys.ensemble' in ky:
+        for nm0, nm1 in aliases:
+            if nm == nm0 and nm not in data1 and hasattr(data1, nm1):
+                nm = nm1
+        
+        model = data0.props['inst_model']
+        if 'mag' in ky and (model.startswith('Sig') or model.startswith('AD2CP')):
+            val = val/10
+        if ky=='echo' and model.startswith('AD2CP'):
+            echosounder = data1[nm]*100
+            data1[nm] = echosounder.astype("uint16")
+        elif 'sys.ensemble' in ky:
             tg = ky[12:]
             nm = 'ensemble_count' + tg
+            val += 1
         elif 'sys.batt_V' in ky:
-            tg = ky[10:]
+            tg = ky.rsplit('.')[-1][6:]
             nm = 'batt' + tg
+            data1[nm] = data1[nm].astype("float16")
+        elif 'sys.temp_mag' in ky:
+            tg = ky.rsplit('.')[-1][8:]
+            nm = 'temp_mag' + tg
+            data1[nm] = data1[nm].astype("float16")
+        elif 'sys.temp_press' in ky:
+            tg = ky.rsplit('.')[-1][10:]
+            nm = 'temp_press' + tg
+            data1[nm] = data1[nm].astype("float16")
         elif ky == 'env.press':
-            tg = ky[9:]
+            tg = ky.rsplit('.')[-1][5:]
             nm = 'pressure' + tg
-            
         elif ky == 'Spec.vel':
             nm = 'psd'
-            
         elif 'sys.xmit_energy' in ky:
             tg = ky[15:]
             nm = 'xmit_energy' + tg
@@ -244,10 +259,15 @@ def compare_data(data0, data1):
             tg = ky[13:]
             nm = 'ambig_vel' + tg
             val = np.median(val.copy())/1000
-            
-        for nm0, nm1 in aliases:
-            if nm == nm0 and nm not in data1 and nm1 in data1:
-                nm = nm1
+        elif 'orient_up' in ky:
+            nortek_orient = {0:'horizontal', 1:'horizontal', 2:'horizontal',
+                            3:'horizontal', 4:'up', 5:'down', 7:'AHRS'}
+            val = nortek_orient[np.median(val)]
+        elif '_quality' in ky: # ast and alt_quality
+            val = val/100
+        elif 'ast_dist' in nm or 'alt_dist' in nm:
+            data1[nm] = data1[nm].astype("float16")
+
         if nm == 'vel':
             atol = 1e-7
             
@@ -257,7 +277,10 @@ def compare_data(data0, data1):
                 d = data1[nm]
             else:
                 d = getattr(data1, nm)
-            if np.allclose(d, val, rtol=rtol, atol=atol, equal_nan=True):
+
+            if type(d)==str and d==val:
+                pass
+            elif np.allclose(d, val, rtol=rtol, atol=atol, equal_nan=True):
                     pass # Don't print matches.
                     #print("    {} OK!".format(ky))
             else:
