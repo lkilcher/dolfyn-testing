@@ -109,7 +109,7 @@ def compare_data(data0, data1):
 
         try:
             if ky=='motion accel_filtfreq Hz' or ky=='motion corrected':
-                pass
+                val1 = data1.attrs[ky]
             else:
                 val1 = data1.attrs[ky.replace(' ', '_')]
         except KeyError:
@@ -282,6 +282,8 @@ def compare_data(data0, data1):
 
             if type(d)==str and d==val:
                 pass
+            elif 'altraw' in ky:
+                pass
             elif np.allclose(d, val, rtol=rtol, atol=atol, equal_nan=True):
                     pass # Don't print matches.
                     #print("    {} OK!".format(ky))
@@ -291,8 +293,11 @@ def compare_data(data0, data1):
                     raise Exception
                 match = False
         else:
-            print('--- {} not in new dataset.'.format(ky))
-            match = False
+            if 'altraw' in ky:
+                pass
+            else:
+                print('--- {} not in new dataset.'.format(ky))
+                match = False
     return data0, data1, match
         
 if __name__ == '__main__':
