@@ -136,6 +136,9 @@ def compare_data(data0, data1):
                     _tmp.append(val.split('.')[-1])
                 else:
                     _tmp.append(val)
+            for ky in ['mag', 'mag_b5']:
+                if ky in val1:
+                    val1.remove(ky)
             val0 = _tmp
             val0.sort()
             val1.sort()
@@ -225,7 +228,7 @@ def compare_data(data0, data1):
                 nm = nm1
         
         model = data0.props['inst_model']
-        if 'mag' in ky and (model.startswith('Sig') or model.startswith('AD2CP')):
+        if ky.startswith('orient.mag') and (model.startswith('Sig') or model.startswith('AD2CP')):
             val = val/10
         if ky=='echo' and model.startswith('AD2CP'):
             echosounder = data1[nm]*100
