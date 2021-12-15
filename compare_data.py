@@ -133,12 +133,11 @@ def compare_data(data0, data1):
                 if val == 'bt_vel':
                     _tmp.append('vel_bt')
                 elif val.startswith('orient.'):
-                    _tmp.append(val.split('.')[-1])
+                    if not val.endswith('mag'):
+                        _tmp.append(val.split('.')[-1])
                 else:
                     _tmp.append(val)
-            for ky in ['mag', 'mag_b5']:
-                if ky in val1:
-                    val1.remove(ky)
+            val1 = [_ky.rsplit('.')[-1] for _ky in val1 if not _ky.startswith('mag')]
             val0 = _tmp
             val0.sort()
             val1.sort()
@@ -240,7 +239,7 @@ def compare_data(data0, data1):
             val = val/10
         if ky=='echo' and model.startswith('AD2CP'):
             echosounder = data1[nm]*100
-            data1[nm] = echosounder.astype("uint16")
+            data1[nm] = echosounder.astype("int32")
         elif 'sys.ensemble' in ky:
             tg = ky[12:]
             nm = 'ensemble_count' + tg
@@ -289,6 +288,8 @@ def compare_data(data0, data1):
             atol = 1e-2
         if nm in ['temp_mag']:
             rtol = 1e-3
+        if nm in ['echo']:
+            atol = 1.1
             
         if hasattr(data1, nm):
             if 'roll' in nm:

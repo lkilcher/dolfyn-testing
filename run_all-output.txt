@@ -56,13 +56,10 @@ Checking data for Sig1000_IMU_rotate_inst2earth...
 ### VEL DOES NOT MATCH
 
 *********************************
-Checking data for Sig1000_IMU_ud...
-### ORIENT.RAW.HEADING DOES NOT MATCH
+Checking data for Sig1000_IMU_ud... OK! (LFK manual check)
 
 *********************************
 Checking data for VelEchoBT01...
-Property 'mag_b5' does not match
-### ECHO DOES NOT MATCH
 --- env.press_bt not in new dataset.
 --- env.press_echo not in new dataset.
 ### SYS.ENSEMBLE_BT DOES NOT MATCH
@@ -73,8 +70,6 @@ Property 'mag_b5' does not match
 
 *********************************
 Checking data for VelEchoBT01_rotate_beam2inst...
-Property 'mag_b5' does not match
-### ECHO DOES NOT MATCH
 --- env.press_bt not in new dataset.
 --- env.press_echo not in new dataset.
 ### SYS.ENSEMBLE_BT DOES NOT MATCH
@@ -117,34 +112,31 @@ Checking data for vector_data01_subset...### NO DOLfYN 1.0 FILE ###
 Checking data for vector_data01_uclean...### NO DOLfYN 1.0 FILE ###
 
 *********************************
-Checking data for vector_data_imu01-json...
-Property 'mag_b5' does not match
+Checking data for vector_data_imu01-json... OK!
 
 *********************************
 Checking data for vector_data_imu01-json_mc...
-Property 'mag_b5' does not match
+Property 'rotate_vars' does not match
 ### ORIENT.ACCLOW DOES NOT MATCH
 ### ORIENT.VELACC DOES NOT MATCH
 ### VEL DOES NOT MATCH
 
 *********************************
-Checking data for vector_data_imu01...
-Property 'mag_b5' does not match
+Checking data for vector_data_imu01... OK!
 
 *********************************
-Checking data for vector_data_imu01_head_pitch_roll...
-Property 'mag_b5' does not match
+Checking data for vector_data_imu01_head_pitch_roll... OK!
 
 *********************************
 Checking data for vector_data_imu01_mc...
-Property 'mag_b5' does not match
+Property 'rotate_vars' does not match
 ### ORIENT.ACCLOW DOES NOT MATCH
 ### ORIENT.VELACC DOES NOT MATCH
 ### VEL DOES NOT MATCH
 
 *********************************
 Checking data for vector_data_imu01_mcDeclin10...
-Property 'mag_b5' does not match
+Property 'rotate_vars' does not match
 ### ORIENT.ACCLOW DOES NOT MATCH
 ### ORIENT.VELACC DOES NOT MATCH
 ### VEL DOES NOT MATCH
@@ -152,18 +144,15 @@ Property 'mag_b5' does not match
 *********************************
 Checking data for vector_data_imu01_rotate_earth2principal...
 Property 'principal_heading' does not match
-Property 'mag_b5' does not match
 ### ORIENT.ACCEL DOES NOT MATCH
 ### ORIENT.ANGRT DOES NOT MATCH
 ### VEL DOES NOT MATCH
 
 *********************************
-Checking data for vector_data_imu01_rotate_inst2beam...
-Property 'mag_b5' does not match
+Checking data for vector_data_imu01_rotate_inst2beam... OK!
 
 *********************************
-Checking data for vector_data_imu01_rotate_inst2earth...
-Property 'mag_b5' does not match
+Checking data for vector_data_imu01_rotate_inst2earth... OK!
 
 *********************************
 Checking data for winriver01...

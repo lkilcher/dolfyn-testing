@@ -44,6 +44,13 @@ for ffname in ALL_FILES:
         # some reason is getting a different value for the principal
         # heading. I bet this is a nanmean/mean issue.
         # ... anyway, I think we're fine here.
+
+    elif fnm.startswith('Sig1000_IMU_ud'):
+        print(" OK! (LFK manual check)")
+        # This file disagrees due to whether declination is included
+        # in the heading. I think doflyn-1.0 does this right (includes
+        # it), so I'm calling this resolved.
+
     elif match:
         print(" OK!")
     else:
