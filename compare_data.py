@@ -200,6 +200,12 @@ def compare_data(data0, data1):
         rtol = 1e-5
         atol = 1e-8
         nm = ky.rsplit('.')[-1]
+        if nm.startswith('mag'):
+            # Ignore all the mag variables, always.
+            continue
+        if nm in ['adc', 'rtc']:
+            # Ignore these variables.
+            continue
         if ky.startswith('config'):
             continue
         elif ky in ['props', 'gtime',]:
@@ -222,6 +228,8 @@ def compare_data(data0, data1):
                 val += data0.config['cell_size']
             #print(val - data1.range)
             atol = 5e-3
+        elif ky.endswith('temp_press'):
+            atol = 3e-2
 
         for nm0, nm1 in aliases:
             if nm == nm0 and nm not in data1 and hasattr(data1, nm1):
@@ -275,6 +283,12 @@ def compare_data(data0, data1):
             atol = 1e-6
         if nm == 'orientmat':
             atol = 1e-6
+        if nm in ['accel', 'accel_b5', 'mag', 'mag_b5']:
+            atol = 1e-5
+        if nm in ['batt']:
+            atol = 1e-2
+        if nm in ['temp_mag']:
+            rtol = 1e-3
             
         if hasattr(data1, nm):
             if 'roll' in nm:

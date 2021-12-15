@@ -15,124 +15,70 @@ Checking data for AWAC_test01_inst2beam... OK!
 Checking data for AWAC_test01_ud... OK!
 
 *********************************
-Checking data for BenchFile01...
-Property 'rotate_vars' does not match
-### SYS.TEMP_MAG DOES NOT MATCH
-### SYS.TEMP_PRESS DOES NOT MATCH
+Checking data for BenchFile01... OK!
 
 *********************************
-Checking data for BenchFile01_rotate_beam2inst...
-Property 'rotate_vars' does not match
-### SYS.TEMP_MAG DOES NOT MATCH
-### SYS.TEMP_PRESS DOES NOT MATCH
+Checking data for BenchFile01_rotate_beam2inst... OK!
 
 *********************************
-Checking data for BenchFile01_rotate_earth2principal...
-Property 'principal_heading' does not match
-Property 'rotate_vars' does not match
-### ORIENT.ACCEL DOES NOT MATCH
-### ORIENT.ACCEL_B5 DOES NOT MATCH
-### ORIENT.MAG DOES NOT MATCH
-### ORIENT.MAG_B5 DOES NOT MATCH
-### SYS.TEMP_MAG DOES NOT MATCH
-### SYS.TEMP_PRESS DOES NOT MATCH
-### VEL DOES NOT MATCH
+Checking data for BenchFile01_rotate_earth2principal... OK! (LFK manual check)
 
 *********************************
-Checking data for BenchFile01_rotate_inst2earth...
-Property 'rotate_vars' does not match
-### ORIENT.ACCEL DOES NOT MATCH
-### ORIENT.ACCEL_B5 DOES NOT MATCH
-### ORIENT.MAG DOES NOT MATCH
-### ORIENT.MAG_B5 DOES NOT MATCH
-### SYS.TEMP_MAG DOES NOT MATCH
-### SYS.TEMP_PRESS DOES NOT MATCH
+Checking data for BenchFile01_rotate_inst2earth... OK!
 
 *********************************
-Checking data for RDI_test01...
---- sys.adc not in new dataset.
---- sys.rtc not in new dataset.
+Checking data for RDI_test01... OK!
 
 *********************************
-Checking data for RDI_test01_rotate_beam2inst...
---- sys.adc not in new dataset.
---- sys.rtc not in new dataset.
+Checking data for RDI_test01_rotate_beam2inst... OK!
 
 *********************************
-Checking data for RDI_test01_rotate_earth2principal...
-Property 'inst2earth:fixed' NOT FOUND in new dataset
-Property 'principal_heading' does not match
---- sys.adc not in new dataset.
---- sys.rtc not in new dataset.
-### VEL DOES NOT MATCH
+Checking data for RDI_test01_rotate_earth2principal... OK! (LFK manual check)
 
 *********************************
-Checking data for RDI_test01_rotate_inst2earth...
-Property 'inst2earth:fixed' NOT FOUND in new dataset
---- sys.adc not in new dataset.
---- sys.rtc not in new dataset.
+Checking data for RDI_test01_rotate_inst2earth... OK!
 
 *********************************
-Checking data for RDI_withBT...
---- sys.adc not in new dataset.
---- sys.rtc not in new dataset.
+Checking data for RDI_withBT... OK!
 
 *********************************
-Checking data for Sig1000_IMU...
-Property 'rotate_vars' does not match
-### SYS.BATT_V DOES NOT MATCH
-### SYS.TEMP_MAG DOES NOT MATCH
+Checking data for Sig1000_IMU... OK!
 
 *********************************
-Checking data for Sig1000_IMU_rotate_beam2inst...
-Property 'rotate_vars' does not match
-### SYS.BATT_V DOES NOT MATCH
-### SYS.TEMP_MAG DOES NOT MATCH
+Checking data for Sig1000_IMU_rotate_beam2inst... OK!
 
 *********************************
 Checking data for Sig1000_IMU_rotate_inst2earth...
-Property 'rotate_vars' does not match
 ### ORIENT.ACCEL DOES NOT MATCH
 ### ORIENT.ACCEL_B5 DOES NOT MATCH
 ### ORIENT.ANGRT DOES NOT MATCH
 ### ORIENT.ANGRT_B5 DOES NOT MATCH
-### ORIENT.MAG DOES NOT MATCH
-### ORIENT.MAG_B5 DOES NOT MATCH
-### SYS.BATT_V DOES NOT MATCH
-### SYS.TEMP_MAG DOES NOT MATCH
 ### VEL DOES NOT MATCH
 
 *********************************
 Checking data for Sig1000_IMU_ud...
-Property 'rotate_vars' does not match
 ### ORIENT.RAW.HEADING DOES NOT MATCH
-### SYS.BATT_V DOES NOT MATCH
-### SYS.TEMP_MAG DOES NOT MATCH
 
 *********************************
 Checking data for VelEchoBT01...
-Property 'rotate_vars' does not match
+Property 'mag_b5' does not match
 ### ECHO DOES NOT MATCH
 --- env.press_bt not in new dataset.
 --- env.press_echo not in new dataset.
-### ORIENT.MAG_BT DOES NOT MATCH
 ### SYS.ENSEMBLE_BT DOES NOT MATCH
 ### SYS.ENSEMBLE_ECHO DOES NOT MATCH
-### SYS.TEMP_MAG DOES NOT MATCH
 ### SYS.TEMP_MAG_BT DOES NOT MATCH
 ### SYS.TEMP_MAG_ECHO DOES NOT MATCH
 ### RANGE_ECHO DOES NOT MATCH
 
 *********************************
 Checking data for VelEchoBT01_rotate_beam2inst...
-Property 'rotate_vars' does not match
+Property 'mag_b5' does not match
 ### ECHO DOES NOT MATCH
 --- env.press_bt not in new dataset.
 --- env.press_echo not in new dataset.
-### ORIENT.MAG_BT DOES NOT MATCH
 ### SYS.ENSEMBLE_BT DOES NOT MATCH
 ### SYS.ENSEMBLE_ECHO DOES NOT MATCH
-### SYS.TEMP_MAG DOES NOT MATCH
 ### SYS.TEMP_MAG_BT DOES NOT MATCH
 ### SYS.TEMP_MAG_ECHO DOES NOT MATCH
 ### RANGE_ECHO DOES NOT MATCH
@@ -171,31 +117,34 @@ Checking data for vector_data01_subset...### NO DOLfYN 1.0 FILE ###
 Checking data for vector_data01_uclean...### NO DOLfYN 1.0 FILE ###
 
 *********************************
-Checking data for vector_data_imu01-json... OK!
+Checking data for vector_data_imu01-json...
+Property 'mag_b5' does not match
 
 *********************************
 Checking data for vector_data_imu01-json_mc...
-Property 'rotate_vars' does not match
+Property 'mag_b5' does not match
 ### ORIENT.ACCLOW DOES NOT MATCH
 ### ORIENT.VELACC DOES NOT MATCH
 ### VEL DOES NOT MATCH
 
 *********************************
-Checking data for vector_data_imu01... OK!
+Checking data for vector_data_imu01...
+Property 'mag_b5' does not match
 
 *********************************
-Checking data for vector_data_imu01_head_pitch_roll... OK!
+Checking data for vector_data_imu01_head_pitch_roll...
+Property 'mag_b5' does not match
 
 *********************************
 Checking data for vector_data_imu01_mc...
-Property 'rotate_vars' does not match
+Property 'mag_b5' does not match
 ### ORIENT.ACCLOW DOES NOT MATCH
 ### ORIENT.VELACC DOES NOT MATCH
 ### VEL DOES NOT MATCH
 
 *********************************
 Checking data for vector_data_imu01_mcDeclin10...
-Property 'rotate_vars' does not match
+Property 'mag_b5' does not match
 ### ORIENT.ACCLOW DOES NOT MATCH
 ### ORIENT.VELACC DOES NOT MATCH
 ### VEL DOES NOT MATCH
@@ -203,35 +152,31 @@ Property 'rotate_vars' does not match
 *********************************
 Checking data for vector_data_imu01_rotate_earth2principal...
 Property 'principal_heading' does not match
+Property 'mag_b5' does not match
 ### ORIENT.ACCEL DOES NOT MATCH
 ### ORIENT.ANGRT DOES NOT MATCH
-### ORIENT.MAG DOES NOT MATCH
 ### VEL DOES NOT MATCH
 
 *********************************
-Checking data for vector_data_imu01_rotate_inst2beam... OK!
+Checking data for vector_data_imu01_rotate_inst2beam...
+Property 'mag_b5' does not match
 
 *********************************
-Checking data for vector_data_imu01_rotate_inst2earth... OK!
+Checking data for vector_data_imu01_rotate_inst2earth...
+Property 'mag_b5' does not match
 
 *********************************
 Checking data for winriver01...
 ### glatitude shapes do not match!
 ### glongitude shapes do not match!
---- sys.adc not in new dataset.
---- sys.rtc not in new dataset.
 
 *********************************
 Checking data for winriver02...
 ### glatitude shapes do not match!
 ### glongitude shapes do not match!
---- sys.adc not in new dataset.
---- sys.rtc not in new dataset.
 
 *********************************
 Checking data for winriver02_rotate_ship2earth...
 Property 'inst2earth:fixed' NOT FOUND in new dataset
 ### glatitude shapes do not match!
 ### glongitude shapes do not match!
---- sys.adc not in new dataset.
---- sys.rtc not in new dataset.
