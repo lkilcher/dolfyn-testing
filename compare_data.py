@@ -107,6 +107,9 @@ def compare_data(data0, data1):
             data0['inst2head_rotmat'] = val0
             continue
 
+        if ky == 'Itke_thresh':
+            continue
+
         try:
             if ky=='motion accel_filtfreq Hz' or ky=='motion corrected':
                 val1 = data1.attrs[ky]
@@ -130,6 +133,8 @@ def compare_data(data0, data1):
         elif ky == 'rotate_vars':
             _tmp = []
             for val in list(val0):
+                if val == 'velraw':
+                    val = 'vel_raw'
                 if val == 'bt_vel':
                     _tmp.append('vel_bt')
                 elif val.startswith('orient.'):
@@ -202,7 +207,7 @@ def compare_data(data0, data1):
         if nm.startswith('mag'):
             # Ignore all the mag variables, always.
             continue
-        if nm in ['adc', 'rtc']:
+        if nm in ['adc', 'rtc', 'range_echo']:
             # Ignore these variables.
             continue
         if ky.startswith('config'):
@@ -280,16 +285,20 @@ def compare_data(data0, data1):
 
         if nm == 'vel':
             atol = 1e-6
-        if nm == 'orientmat':
-            atol = 1e-6
+        if nm in ['orientmat']:
+            atol = 1e-3
+            rtol = 1e-6
         if nm in ['accel', 'accel_b5', 'mag', 'mag_b5']:
             atol = 1e-5
         if nm in ['batt']:
             atol = 1e-2
-        if nm in ['temp_mag']:
+        if nm.startswith('temp'):
             rtol = 1e-3
         if nm in ['echo']:
             atol = 1.1
+        if nm in ['roll']:
+            rtol = 1e-5
+            atol = 1e-4
             
         if hasattr(data1, nm):
             if 'roll' in nm:

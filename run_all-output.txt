@@ -64,9 +64,6 @@ Checking data for VelEchoBT01...
 --- env.press_echo not in new dataset.
 ### SYS.ENSEMBLE_BT DOES NOT MATCH
 ### SYS.ENSEMBLE_ECHO DOES NOT MATCH
-### SYS.TEMP_MAG_BT DOES NOT MATCH
-### SYS.TEMP_MAG_ECHO DOES NOT MATCH
-### RANGE_ECHO DOES NOT MATCH
 
 *********************************
 Checking data for VelEchoBT01_rotate_beam2inst...
@@ -74,22 +71,15 @@ Checking data for VelEchoBT01_rotate_beam2inst...
 --- env.press_echo not in new dataset.
 ### SYS.ENSEMBLE_BT DOES NOT MATCH
 ### SYS.ENSEMBLE_ECHO DOES NOT MATCH
-### SYS.TEMP_MAG_BT DOES NOT MATCH
-### SYS.TEMP_MAG_ECHO DOES NOT MATCH
-### RANGE_ECHO DOES NOT MATCH
 
 *********************************
-Checking data for burst_mode01...
-### ENV.TEMP DOES NOT MATCH
-### ORIENT.ORIENTMAT DOES NOT MATCH
+Checking data for burst_mode01... OK!
 
 *********************************
-Checking data for vector_data01...
-### ORIENT.RAW.ROLL DOES NOT MATCH
+Checking data for vector_data01... OK!
 
 *********************************
 Checking data for vector_data01_bin...
-Property 'Itke_thresh' NOT FOUND in new dataset
 Property 'n_fft_coh' does not match
 ### STRESS DOES NOT MATCH
 ### TKE_VEC DOES NOT MATCH
@@ -116,7 +106,6 @@ Checking data for vector_data_imu01-json... OK!
 
 *********************************
 Checking data for vector_data_imu01-json_mc...
-Property 'rotate_vars' does not match
 ### ORIENT.ACCLOW DOES NOT MATCH
 ### ORIENT.VELACC DOES NOT MATCH
 ### VEL DOES NOT MATCH
@@ -129,14 +118,12 @@ Checking data for vector_data_imu01_head_pitch_roll... OK!
 
 *********************************
 Checking data for vector_data_imu01_mc...
-Property 'rotate_vars' does not match
 ### ORIENT.ACCLOW DOES NOT MATCH
 ### ORIENT.VELACC DOES NOT MATCH
 ### VEL DOES NOT MATCH
 
 *********************************
 Checking data for vector_data_imu01_mcDeclin10...
-Property 'rotate_vars' does not match
 ### ORIENT.ACCLOW DOES NOT MATCH
 ### ORIENT.VELACC DOES NOT MATCH
 ### VEL DOES NOT MATCH
