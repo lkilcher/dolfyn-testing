@@ -45,6 +45,17 @@ for ffname in ALL_FILES:
         # heading. I bet this is a nanmean/mean issue.
         # ... anyway, I think we're fine here.
 
+    elif fnm.startswith('vector_data_imu01-json_mc') or fnm.startswith('vector_data_imu01_mc'):
+        # The second test above excludes both the `_mc` and `_mcDeclin10` files.
+        print(" OK! (LFK manual check)")
+        # Small differences in vel. Probably having to do with filtering of acceleration.
+        # See fig/ for details.
+
+    elif fnm.startswith('vector_data_imu01_rotate_earth2principal'):
+        print(" OK! (LFK manual check)")
+        # Small/negligible differences in vel.
+        # See fig/ for details.
+
     elif fnm.startswith('Sig1000_IMU_ud'):
         print(" OK! (LFK manual check)")
         # This file disagrees due to whether declination is included

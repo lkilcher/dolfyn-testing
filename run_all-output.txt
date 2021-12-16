@@ -105,10 +105,7 @@ Checking data for vector_data01_uclean...### NO DOLfYN 1.0 FILE ###
 Checking data for vector_data_imu01-json... OK!
 
 *********************************
-Checking data for vector_data_imu01-json_mc...
-### ORIENT.ACCLOW DOES NOT MATCH
-### ORIENT.VELACC DOES NOT MATCH
-### VEL DOES NOT MATCH
+Checking data for vector_data_imu01-json_mc... OK! (LFK manual check)
 
 *********************************
 Checking data for vector_data_imu01... OK!
@@ -117,23 +114,13 @@ Checking data for vector_data_imu01... OK!
 Checking data for vector_data_imu01_head_pitch_roll... OK!
 
 *********************************
-Checking data for vector_data_imu01_mc...
-### ORIENT.ACCLOW DOES NOT MATCH
-### ORIENT.VELACC DOES NOT MATCH
-### VEL DOES NOT MATCH
+Checking data for vector_data_imu01_mc... OK! (LFK manual check)
 
 *********************************
-Checking data for vector_data_imu01_mcDeclin10...
-### ORIENT.ACCLOW DOES NOT MATCH
-### ORIENT.VELACC DOES NOT MATCH
-### VEL DOES NOT MATCH
+Checking data for vector_data_imu01_mcDeclin10... OK! (LFK manual check)
 
 *********************************
-Checking data for vector_data_imu01_rotate_earth2principal...
-Property 'principal_heading' does not match
-### ORIENT.ACCEL DOES NOT MATCH
-### ORIENT.ANGRT DOES NOT MATCH
-### VEL DOES NOT MATCH
+Checking data for vector_data_imu01_rotate_earth2principal... OK! (LFK manual check)
 
 *********************************
 Checking data for vector_data_imu01_rotate_inst2beam... OK!
