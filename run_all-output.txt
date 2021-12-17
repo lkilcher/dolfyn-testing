@@ -63,15 +63,11 @@ Checking data for Sig500_last_ensemble_is_whole...### NO DOLfYN 1.0 FILE ###
 
 *********************************
 Checking data for VelEchoBT01...
---- env.press_bt not in new dataset.
---- env.press_echo not in new dataset.
 ### SYS.ENSEMBLE_BT DOES NOT MATCH
 ### SYS.ENSEMBLE_ECHO DOES NOT MATCH
 
 *********************************
 Checking data for VelEchoBT01_rotate_beam2inst...
---- env.press_bt not in new dataset.
---- env.press_echo not in new dataset.
 ### SYS.ENSEMBLE_BT DOES NOT MATCH
 ### SYS.ENSEMBLE_ECHO DOES NOT MATCH
 
