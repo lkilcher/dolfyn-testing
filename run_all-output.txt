@@ -59,7 +59,7 @@ Checking data for Sig1000_IMU_rotate_inst2earth...
 Checking data for Sig1000_IMU_ud... OK! (LFK manual check)
 
 *********************************
-Checking data for Sig500_last_ensemble_is_whole...### NO DOLfYN 1.0 FILE ###
+Checking data for Sig500_last_ensemble_is_whole... OK!
 
 *********************************
 Checking data for VelEchoBT01...
