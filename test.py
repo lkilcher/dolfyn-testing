@@ -162,7 +162,7 @@ if False:
     axs[0].set_title("ANGRT")
     fig.savefig('fig/' + fnm + '.ANGRT.png')
     
-if True:
+if False:
     fnm = 'vector_data01'
     # Compare the data that disagrees for this file:
     data0, data1 = compare_file(fnm + '.h5')
@@ -207,3 +207,77 @@ if True:
     axs[0].set_title("STRESS")
     ax.legend()
     fig.savefig('fig/' + fnm + '.STRESS.png')
+
+if True:
+    fnm = 'Sig1000_IMU_rotate_beam2inst'
+    # Compare the data that disagrees for this file:
+    data0, data1 = compare_file(fnm + '.h5')
+
+    # This data is LITERALLY IDENTICAL (not just 'isclose')!!!
+    assert (data0.orient.orientmat == data1.orientmat).all()
+    assert (data0.vel == data1.vel).all()
+    assert (data0.orient.accel == data1.accel).all()
+    assert (data0.orient.angrt == data1.angrt).all()
+    assert (data0.orient.accel_b5 == data1.accel_b5).all()
+    assert (data0.orient.angrt_b5 == data1.angrt_b5).all()
+
+    edat0 = dlfn0.rotate2(data0, 'earth')
+    edat1 = dlfn1.rotate2(data1, 'earth')
+
+    # Load the data from the files that aren't matching:
+    fnm = 'Sig1000_IMU_rotate_inst2earth'
+    cd0, cd1 = compare_file(fnm + '.h5')
+
+    assert edat0 == cd0
+
+    # Interestingly, this fails:
+    # assert (edat1.vel == cd1.vel).all()
+    # ...
+    # But these all pass:
+    assert np.allclose(cd1.vel, edat1.vel)
+    assert np.allclose(cd1.angrt, edat1.angrt)
+    assert np.allclose(cd1.angrt_b5, edat1.angrt_b5)
+    assert np.allclose(cd1.accel, edat1.accel)
+    assert np.allclose(cd1.accel_b5, edat1.accel_b5)
+    # ... long story short, edat1 == cd1 (approximately)
+
+
+    fig1 = fig = plt.figure(600)
+    fig.clf()
+    fig, axs = plt.subplots(4, 1, num=fig.number, sharex=True, sharey=True)
+
+    for idx in range(4):
+        ax = axs[idx]
+        ax.plot(edat0.vel[idx, 0], color='r', label='h5py')
+        ax.plot(edat1.vel[idx, 0], color='b', label='xarray')
+
+    axs[0].set_title("VEL")
+    fig.savefig('fig/' + fnm + '.VEL.png')
+
+    fig2 = fig = plt.figure(601)
+    fig.clf()
+    fig, axs = plt.subplots(3, 1, num=fig.number, sharex=True, sharey=True)
+
+    for idx in range(3):
+        ax = axs[idx]
+        ax.plot(edat0.orient.accel[idx], color='r', label='h5py')
+        ax.plot(edat1.accel[idx], color='b', label='xarray')
+        ax.plot(edat0.orient.accel_b5[idx], color='r', ls='--', label='h5py')
+        ax.plot(edat1.accel_b5[idx], color='b', ls='--', label='xarray')
+
+    axs[0].set_title("ACCEL")
+    fig.savefig('fig/' + fnm + '.ACCEL.png')
+
+    fig3 = fig = plt.figure(602)
+    fig.clf()
+    fig, axs = plt.subplots(3, 1, num=fig.number, sharex=True, sharey=True)
+
+    for idx in range(3):
+        ax = axs[idx]
+        ax.plot(edat0.orient.angrt[idx], color='r', label='h5py')
+        ax.plot(edat1.angrt[idx], color='b', label='xarray')
+        ax.plot(edat0.orient.angrt_b5[idx], color='r', ls='--', label='h5py')
+        ax.plot(edat1.angrt_b5[idx], color='b', ls='--', label='xarray')
+
+    axs[0].set_title("ACCEL")
+    fig.savefig('fig/' + fnm + '.ANGRT.png')
