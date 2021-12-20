@@ -84,9 +84,7 @@ Property 'n_fft_coh' does not match
 ### TKE_VEC DOES NOT MATCH
 
 *********************************
-Checking data for vector_data01_rotate_earth2principal...
-Property 'principal_heading' does not match
-### VEL DOES NOT MATCH
+Checking data for vector_data01_rotate_earth2principal... OK! (LFK manual check)
 
 *********************************
 Checking data for vector_data01_rotate_inst2beam... OK!

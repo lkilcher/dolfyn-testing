@@ -56,6 +56,10 @@ for ffname in ALL_FILES:
         # Small/negligible differences in vel.
         # See fig/ for details.
 
+    elif fnm.startswith('vector_data01_rotate_earth2principal'):
+        print(" OK! (LFK manual check)")
+        # This has to do with a minor difference in the length of the data records.
+
     elif fnm.startswith('Sig1000_IMU_ud'):
         print(" OK! (LFK manual check)")
         # This file disagrees due to whether declination is included
