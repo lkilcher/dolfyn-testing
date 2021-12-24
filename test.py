@@ -162,7 +162,7 @@ if False:
     axs[0].set_title("ANGRT")
     fig.savefig('fig/' + fnm + '.ANGRT.png')
     
-if False:
+if True:
     fnm = 'vector_data01'
     # Compare the data that disagrees for this file:
     data0, data1 = compare_file(fnm + '.h5')
@@ -175,7 +175,7 @@ if False:
     datb0 = bnr0(data0)
 
     # Now do the calculations manually...
-    U = data0.vel[:,:80].reshape(3,4,20).copy()
+    u = data0.vel[:,:80].reshape(3,4,20).copy()
     u -= u.mean(-1)[:, :, None]
     tke = (u ** 2).mean(-1)
     stress = np.stack([u[0] * u[1], u[0] * u[2], u[1] * u[2]]).mean(-1)
@@ -186,9 +186,10 @@ if False:
 
     for idx in range(3):
         ax = axs[idx]
-        ax.plot(tke[idx], 'k--', lw=4, label='TRUTH')
-        ax.plot(datb0.tke_vec[idx], color='r', label='h5py')
-        ax.plot(datb1.tke_vec[idx], color='b', label='xarray')
+        ax.plot(tke[idx], 'k--', lw=4, label='demean')
+        #ax.plot(tke[idx], 'k--', lw=4, label='detrend')
+        ax.plot(datb0.tke_vec[idx], color='r', lw=3, label='h5py')
+        ax.plot(datb1.tke_vec[idx], color='b', lw=1, label='xarray')
     ax.set_yscale('log')
     ax.legend()
         
@@ -201,12 +202,17 @@ if False:
     
     for idx in range(3):
         ax = axs[idx]
-        ax.plot(stress[idx], 'k--', lw=4, label='TRUTH')
-        ax.plot(datb0.stress[idx], color='r', label='h5py')
+        ax.plot(stress[idx], 'k--', lw=4, label='demean')
+        ax.plot(datb0.stress[idx], color='r', lw=3, label='h5py')
         ax.plot(datb1.stress[idx], color='b', label='xarray')
     axs[0].set_title("STRESS")
     ax.legend()
     fig.savefig('fig/' + fnm + '.STRESS.png')
+
+    fnm = 'vector_data01_bin'
+    data0, data1 = compare_file(fnm + '.h5')
+    # Now only n_fft_coh is different, so we'll override this...
+
 
 if True:
     fnm = 'Sig1000_IMU_rotate_beam2inst'

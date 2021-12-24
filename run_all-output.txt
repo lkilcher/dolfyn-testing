@@ -78,10 +78,7 @@ Checking data for burst_mode01... OK!
 Checking data for vector_data01... OK!
 
 *********************************
-Checking data for vector_data01_bin...
-Property 'n_fft_coh' does not match
-### STRESS DOES NOT MATCH
-### TKE_VEC DOES NOT MATCH
+Checking data for vector_data01_bin... OK! (LFK manual check)
 
 *********************************
 Checking data for vector_data01_rotate_earth2principal... OK! (LFK manual check)

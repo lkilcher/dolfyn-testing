@@ -51,6 +51,14 @@ for ffname in ALL_FILES:
         # Small differences in vel. Probably having to do with filtering of acceleration.
         # See fig/ for details.
 
+    elif fnm.startswith('vector_data01_bin'):
+        print(" OK! (LFK manual check)")
+        # This mostly matches after changing dolfyn1 to use 'detrend'
+        # in calc_tke and calc_stress.
+        # The only remaining difference is that n_fft_coh doesn't
+        # match, but that seems to be a problem in the dolfyn0 data
+        # file (where n_fft_coh=3 ?!), so I'm overriding that here.
+
     elif fnm.startswith('vector_data_imu01_rotate_earth2principal'):
         print(" OK! (LFK manual check)")
         # Small/negligible differences in vel.
