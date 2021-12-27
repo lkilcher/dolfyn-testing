@@ -53,7 +53,6 @@ aliases = [('Error', 'error'),
            ('press_echo', 'pressure_echo'),
            ('velraw', 'vel_raw'),
            ('orient_up', 'orientation'),
-           ('ensemble', 'ensemble_count'),
            ('erro', 'error'),
            ('Error', 'error'),
            ]
@@ -249,7 +248,7 @@ def compare_data(data0, data1):
             data1[nm] = echosounder.astype("int32")
         elif 'sys.ensemble' in ky:
             tg = ky[12:]
-            nm = 'ensemble_count' + tg
+            nm = 'ensemble' + tg
             val += 1
         elif 'sys.batt_V' in ky:
             tg = ky.rsplit('.')[-1][6:]
