@@ -15,22 +15,16 @@ Checking data for AWAC_test01_inst2beam... OK!
 Checking data for AWAC_test01_ud... OK!
 
 *********************************
-Checking data for BenchFile01...
-### SYS.ENSEMBLE DOES NOT MATCH
-### SYS.ENSEMBLE_B5 DOES NOT MATCH
+Checking data for BenchFile01... OK!
 
 *********************************
-Checking data for BenchFile01_rotate_beam2inst...
-### SYS.ENSEMBLE DOES NOT MATCH
-### SYS.ENSEMBLE_B5 DOES NOT MATCH
+Checking data for BenchFile01_rotate_beam2inst... OK!
 
 *********************************
 Checking data for BenchFile01_rotate_earth2principal... OK! (LFK manual check)
 
 *********************************
-Checking data for BenchFile01_rotate_inst2earth...
-### SYS.ENSEMBLE DOES NOT MATCH
-### SYS.ENSEMBLE_B5 DOES NOT MATCH
+Checking data for BenchFile01_rotate_inst2earth... OK!
 
 *********************************
 Checking data for RDI_test01... OK!
@@ -49,13 +43,11 @@ Checking data for RDI_withBT... OK!
 
 *********************************
 Checking data for Sig1000_IMU...
-### SYS.ENSEMBLE DOES NOT MATCH
-### SYS.ENSEMBLE_B5 DOES NOT MATCH
+### ORIENT.ORIENTMAT DOES NOT MATCH
 
 *********************************
 Checking data for Sig1000_IMU_rotate_beam2inst...
-### SYS.ENSEMBLE DOES NOT MATCH
-### SYS.ENSEMBLE_B5 DOES NOT MATCH
+### ORIENT.ORIENTMAT DOES NOT MATCH
 
 *********************************
 Checking data for Sig1000_IMU_rotate_inst2earth...
@@ -63,31 +55,22 @@ Checking data for Sig1000_IMU_rotate_inst2earth...
 ### ORIENT.ACCEL_B5 DOES NOT MATCH
 ### ORIENT.ANGRT DOES NOT MATCH
 ### ORIENT.ANGRT_B5 DOES NOT MATCH
-### SYS.ENSEMBLE DOES NOT MATCH
-### SYS.ENSEMBLE_B5 DOES NOT MATCH
+### ORIENT.ORIENTMAT DOES NOT MATCH
 ### VEL DOES NOT MATCH
 
 *********************************
 Checking data for Sig1000_IMU_ud... OK! (LFK manual check)
 
 *********************************
-Checking data for Sig500_last_ensemble_is_whole...
-### SYS.ENSEMBLE DOES NOT MATCH
-### SYS.ENSEMBLE_B5 DOES NOT MATCH
+Checking data for Sig500_last_ensemble_is_whole... OK!
 
 *********************************
 Checking data for VelEchoBT01...
-### SYS.ENSEMBLE DOES NOT MATCH
-### SYS.ENSEMBLE_B5 DOES NOT MATCH
-### SYS.ENSEMBLE_BT DOES NOT MATCH
-### SYS.ENSEMBLE_ECHO DOES NOT MATCH
+### ORIENT.ORIENTMAT DOES NOT MATCH
 
 *********************************
 Checking data for VelEchoBT01_rotate_beam2inst...
-### SYS.ENSEMBLE DOES NOT MATCH
-### SYS.ENSEMBLE_B5 DOES NOT MATCH
-### SYS.ENSEMBLE_BT DOES NOT MATCH
-### SYS.ENSEMBLE_ECHO DOES NOT MATCH
+### ORIENT.ORIENTMAT DOES NOT MATCH
 
 *********************************
 Checking data for burst_mode01... OK!
