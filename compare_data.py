@@ -49,9 +49,10 @@ aliases = [('Error', 'error'),
            ('ssp', 'c_sound'),
            ('sigma_Uh', 'U_std'),
            ('press', 'pressure'),
+           ('press_bt', 'pressure_bt'),
+           ('press_echo', 'pressure_echo'),
            ('velraw', 'vel_raw'),
            ('orient_up', 'orientation'),
-           ('ensemble', 'ensemble_count'),
            ('erro', 'error'),
            ('Error', 'error'),
            ]
@@ -107,6 +108,9 @@ def compare_data(data0, data1):
             data0['inst2head_rotmat'] = val0
             continue
 
+        if ky == 'Itke_thresh':
+            continue
+
         try:
             if ky=='motion accel_filtfreq Hz' or ky=='motion corrected':
                 val1 = data1.attrs[ky]
@@ -130,12 +134,16 @@ def compare_data(data0, data1):
         elif ky == 'rotate_vars':
             _tmp = []
             for val in list(val0):
+                if val == 'velraw':
+                    val = 'vel_raw'
                 if val == 'bt_vel':
                     _tmp.append('vel_bt')
                 elif val.startswith('orient.'):
-                    _tmp.append(val.split('.')[-1])
+                    if not val.endswith('mag'):
+                        _tmp.append(val.split('.')[-1])
                 else:
                     _tmp.append(val)
+            val1 = [_ky.rsplit('.')[-1] for _ky in val1 if not _ky.startswith('mag')]
             val0 = _tmp
             val0.sort()
             val1.sort()
@@ -197,6 +205,12 @@ def compare_data(data0, data1):
         rtol = 1e-5
         atol = 1e-8
         nm = ky.rsplit('.')[-1]
+        if nm.startswith('mag'):
+            # Ignore all the mag variables, always.
+            continue
+        if nm in ['adc', 'rtc', 'range_echo']:
+            # Ignore these variables.
+            continue
         if ky.startswith('config'):
             continue
         elif ky in ['props', 'gtime',]:
@@ -219,20 +233,22 @@ def compare_data(data0, data1):
                 val += data0.config['cell_size']
             #print(val - data1.range)
             atol = 5e-3
+        elif ky.endswith('temp_press'):
+            atol = 3e-2
 
         for nm0, nm1 in aliases:
             if nm == nm0 and nm not in data1 and hasattr(data1, nm1):
                 nm = nm1
         
         model = data0.props['inst_model']
-        if 'mag' in ky and (model.startswith('Sig') or model.startswith('AD2CP')):
+        if ky.startswith('orient.mag') and (model.startswith('Sig') or model.startswith('AD2CP')):
             val = val/10
         if ky=='echo' and model.startswith('AD2CP'):
             echosounder = data1[nm]*100
-            data1[nm] = echosounder.astype("uint16")
+            data1[nm] = echosounder.astype("int32")
         elif 'sys.ensemble' in ky:
             tg = ky[12:]
-            nm = 'ensemble_count' + tg
+            nm = 'ensemble' + tg
             val += 1
         elif 'sys.batt_V' in ky:
             tg = ky.rsplit('.')[-1][6:]
@@ -270,8 +286,20 @@ def compare_data(data0, data1):
 
         if nm == 'vel':
             atol = 1e-6
-        if nm == 'orientmat':
-            atol = 1e-6
+        if nm in ['orientmat']:
+            atol = 1e-3
+            rtol = 1e-6
+        if nm in ['accel', 'accel_b5', 'mag', 'mag_b5']:
+            atol = 1e-5
+        if nm in ['batt']:
+            atol = 1e-2
+        if nm.startswith('temp'):
+            rtol = 1e-3
+        if nm in ['echo']:
+            atol = 1.1
+        if nm in ['roll']:
+            rtol = 1e-5
+            atol = 1e-4
             
         if hasattr(data1, nm):
             if 'roll' in nm:
